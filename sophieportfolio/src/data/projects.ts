@@ -1,0 +1,61 @@
+export type ProjectArtVariant = 'sensigo' | 'glowtap' | 'city' | 'trail'
+
+export interface Project {
+  slug: string
+  name: string
+  year: string
+  tag: string
+  summary: string
+  cardBg: string
+  art: ProjectArtVariant
+  artInk: 'light' | 'dark'
+  /** Path under public/, e.g. '/images/projects/sensigo-hero.jpg'. Once set, this
+   * replaces the abstract placeholder art on both the work panel and detail page. */
+  image?: string
+}
+
+// Placeholder data carried over from the existing site structure.
+// Swap summaries / add case-study content once it's ready.
+export const projects: Project[] = [
+  {
+    slug: 'sensigo',
+    name: 'Sensigo',
+    year: '2025',
+    tag: 'Mobile · Product design',
+    summary: 'Case study coming soon.',
+    cardBg: '#2b2138',
+    art: 'sensigo',
+    artInk: 'light',
+    // image: '/images/projects/sensigo-hero.jpg',
+  },
+  {
+    slug: 'glowtap',
+    name: 'GlowTap',
+    year: '2025',
+    tag: 'Hardware · Product design',
+    summary: 'Case study coming soon.',
+    cardBg: '#3e7c9c',
+    art: 'glowtap',
+    artInk: 'light',
+  },
+  {
+    slug: 'city-hungarian-culture-festival',
+    name: 'City — Hungarian Culture Festival',
+    year: '2025',
+    tag: 'Brand · Event design',
+    summary: 'Case study coming soon.',
+    cardBg: '#f6c7d2',
+    art: 'city',
+    artInk: 'dark',
+  },
+  {
+    slug: 'trail-flow',
+    name: 'Trail Flow',
+    year: '2024',
+    tag: 'Mobile · UX research',
+    summary: 'Case study coming soon.',
+    cardBg: '#6f9a4c',
+    art: 'trail',
+    artInk: 'light',
+  },
+]
