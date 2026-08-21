@@ -3,6 +3,22 @@ export interface CaseStudyFact {
   text: string
 }
 
+export interface CaseStudyCard {
+  title: string
+  subtitle?: string
+  facts: CaseStudyFact[]
+}
+
+export interface CaseStudyTable {
+  columns: string[]
+  rows: { label: string; values: string[] }[]
+}
+
+export interface CaseStudyPaletteGroup {
+  label: string
+  colors: { name: string; hex: string }[]
+}
+
 export interface CaseStudySection {
   heading?: string
   paragraphs?: string[]
@@ -12,6 +28,9 @@ export interface CaseStudySection {
     items: string[]
   }
   links?: { label: string; href: string }[]
+  table?: CaseStudyTable
+  cards?: CaseStudyCard[]
+  palette?: CaseStudyPaletteGroup[]
 }
 
 export interface CaseStudy {
@@ -287,6 +306,440 @@ export const caseStudies: Record<string, CaseStudy> = {
         heading: 'Reflection',
         paragraphs: [
           'Through this project, we expanded our prototyping skills and built upon skills learned throughout the class. We learned new laser cutting skills by modeling unique shapes such as a smiley face, and new 3D modeling skills in OnShape — making small adjustments to add texture to a product, learned through YouTube tutorials on the Wrap, Transform, and Offset Plane tools. We also learned a new prototyping method for circuits, which utilized soldering.',
+        ],
+      },
+    ],
+  },
+
+  'city-hungarian-culture-festival': {
+    tagline: 'A visual identity and app for a three-day Hungarian culture festival',
+    intro:
+      'During a 10-week course project, I was challenged to create a cohesive visual identity for a festival hosted on the University of Washington campus — developing an engaging, recognizable app while thoughtfully considering the audience, theme, and experience of the festival itself.',
+    sections: [
+      {
+        heading: 'Introduction',
+        paragraphs: [
+          'During our 10-week course project, I was challenged to create a cohesive visual identity for a festival hosted on the University of Washington campus. The goal was to not only develop an engaging and recognizable app, but also to thoughtfully consider the audience, theme, and experience of the festival itself.',
+        ],
+      },
+      {
+        heading: 'CVP and USP',
+        paragraphs: [
+          'My idea for a festival is a Hungarian Culture Festival on the University of Washington campus. For anyone of any age who wants exposure to the unique culture of Hungary, the idea provides three days of performances, experiences, and products from Hungarian artists, dancers, chefs, bakers, and athletes.',
+          'Unlike the 5th Hungary Festival in Odaiba, this idea provides activities and entertainment into later hours of the day in order to attract an older audience as well, through late night performances and food.',
+        ],
+      },
+      {
+        heading: 'Festival Research',
+        paragraphs: [
+          'I researched three existing Hungarian festivals worldwide and compared them: The 5th Hungary Festival at Odaiba, because it is in Japan, which is very culturally different from Hungary; the Hungarian Heritage Festival in McLean, VA, because it is run by a Hungarian foundation; and the Hungarian Festival in Sarasota, because it is based in the US and run by a non-Hungarian group. I was interested to see how these three festivals compare.',
+        ],
+      },
+      {
+        heading: '5th Hungary Festival at Odaiba',
+        facts: [
+          {
+            label: 'Core Value Proposition',
+            text: 'A 1-day festival in Tokyo about Hungarian heritage, free for anyone in the area. The target audience is people who want to learn more about Hungarian culture or participate in it, achieved through the event and booths about Hungarian heritage.',
+          },
+          {
+            label: 'Unique Selling Point',
+            text: 'Unlike other Hungarian culture festivals, this one has a workshop on completing a Rubik’s cube, making hair accessories, and playing Teqball — run by knowledgeable volunteers with supplies on hand — plus Hungarian-based companies accompanying the food and music.',
+          },
+        ],
+        links: [
+          {
+            label: 'Festival info',
+            href: 'https://culture-hu.translate.goog/jp/tokio/events/Hungari-festival-2024?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp&_x_tr_hist=true',
+          },
+        ],
+      },
+      {
+        heading: 'Hungarian Heritage Festival in McLean, VA',
+        facts: [
+          {
+            label: 'Core Value Proposition',
+            text: 'A 1-day festival about Hungarian heritage run by the Kossuth Foundation, free for anyone in the area. The target audience is people who want to learn more about Hungarian culture or participate in it, achieved through the festival’s performances.',
+          },
+          {
+            label: 'Unique Selling Point',
+            text: 'Unlike other Hungarian culture festivals, this one has hands-on workshops like noodle making and gingerbread decorating, run by knowledgeable volunteers with supplies on hand. It also has an afterparty, so it runs later than others.',
+          },
+        ],
+        links: [
+          { label: 'Festival info', href: 'https://kossuthfoundation.org/events/iii-hungarian-heritage-festival/' },
+        ],
+      },
+      {
+        heading: 'Hungarian Festival in Sarasota',
+        facts: [
+          {
+            label: 'Core Value Proposition',
+            text: 'A 2-day festival in Sarasota, Florida celebrating Hungarian cultural heritage, run by the Global Friendship Foundation and free for anyone in the area. The target audience is people who want to learn more about Hungarian culture or participate in it, achieved through the festival’s performances.',
+          },
+          {
+            label: 'Unique Selling Point',
+            text: 'Unlike other Hungarian culture festivals, this one has sports, dance, archery, and a kids corner, run by knowledgeable volunteers with supplies on hand.',
+          },
+        ],
+        links: [{ label: 'Festival info', href: 'https://sarasotamagyarfesztival.com/' }],
+      },
+      {
+        heading: 'Competitive Analysis',
+        paragraphs: [
+          'Through my research, I found that all Hungarian Culture festivals have a lineup of traditional performances mixed with modern singers. Some festivals have booths with Hungarian companies and workshops. Some teach about traditional sports while others have kids corners. Some festivals even have an after-party for older age groups. For my festival, I wanted to find the perfect intersection between the festivals I researched.',
+        ],
+        table: {
+          columns: ['5th Hungary Festival at Odaiba', 'Hungarian Heritage Festival in McLean VA', 'Hungarian Festival in Sarasota'],
+          rows: [
+            { label: 'Best feature', values: ['Teqball', 'Afterparty', 'Archery'] },
+            {
+              label: 'Best for',
+              values: [
+                'People interested in a mix of Hungarian and Japanese culture.',
+                'Older age groups',
+                'Families',
+              ],
+            },
+            {
+              label: 'Customer',
+              values: [
+                'People who want to learn more about Hungarian culture or people who want to participate in it',
+                'People who want to learn more about Hungarian culture or people who want to participate in it',
+                'People who want to learn more about Hungarian culture or people who want to participate in it',
+              ],
+            },
+            { label: 'Attendance', values: ['Approximately 3,500', 'Unsure', 'Approximately 4,000'] },
+            { label: 'Pricing', values: ['Free', 'Free', 'Free'] },
+            {
+              label: 'Insight',
+              values: [
+                'They have a mix of Hungarian culture and Japanese culture',
+                'They are interested in showing people traditions from Hungary',
+                'They have a big emphasis on the music aspect of the festival',
+              ],
+            },
+          ],
+        },
+      },
+      {
+        heading: 'Personas',
+        paragraphs: [
+          'Through my research, I found that all Hungarian Culture festivals have a lineup of traditional performances mixed with modern singers, booths with Hungarian companies and workshops, traditional sports or kids corners, and sometimes an after-party for older age groups. For my festival, I wanted to find the perfect intersection between the festivals I researched — so I built three personas around it.',
+        ],
+        cards: [
+          {
+            title: 'Anika',
+            subtitle: 'Age 9 — "The Child"',
+            facts: [
+              {
+                label: 'Why her',
+                text: 'She has Hungarian roots and is younger than most people I think of as going to culture festivals.',
+              },
+              {
+                label: 'Backstory',
+                text: 'A 9-year-old girl who lives in California with her parents. Her mom is Hungarian and shared her Hungarian culture with her. Anika likes playing with friends, Roblox, baking, arts and crafts, and listening to music.',
+              },
+              {
+                label: 'Resources',
+                text: 'Doesn’t have many resources of her own to connect with her Hungarian roots. She goes to Hungarian school, where both she and her mom hear about events they should go to together.',
+              },
+              {
+                label: 'Emotions',
+                text: 'Feels split about Hungarian events — sometimes bored or like there’s nothing for kids, but she has lots of fun when other kids are there to interact with.',
+              },
+              {
+                label: 'Goals',
+                text: 'Wants a Hungarian event nearby (a short car ride), with fun things to do and other kids to play with, while staying connected to her Hungarian culture — ideally through cultural workshops.',
+              },
+              {
+                label: 'Scenario',
+                text: 'Hears about a festival from her mom while visiting her sister at UW. It’s an easy walk from the apartment. She plays with other kids at the Hungarian sports workshop, then enjoys her favorite foods.',
+              },
+              { label: 'Favorite brands', text: 'Target, LEGO, Squishmallows' },
+            ],
+          },
+          {
+            title: 'Julia',
+            subtitle: 'Age 50 — "The Mother"',
+            facts: [
+              {
+                label: 'Why her',
+                text: 'She moved from Hungary to live in the US and is very involved in her culture.',
+              },
+              {
+                label: 'Backstory',
+                text: 'A mom of 2 kids who lives in California. She moved from Hungary over 20 years ago and shares her culture with her kids. She likes to work out, cook, travel, and read.',
+              },
+              {
+                label: 'Resources',
+                text: 'Finds it important to stay in touch with her culture. Has a group of Hungarians nearby she goes to events with, often bringing her kids so they can learn through events and travel to Hungary.',
+              },
+              {
+                label: 'Emotions',
+                text: 'Has attended several Hungarian events and enjoys a wide range of them — the performances, the social aspect, the language, and the food, as well as things her kids enjoy.',
+              },
+              {
+                label: 'Goals',
+                text: 'Wants to know about Hungarian events near her and bring her family and friends — a fun lineup for the adults, workshops for the kids, and nothing more than about $20 to attend.',
+              },
+              {
+                label: 'Scenario',
+                text: 'Hears about a festival while visiting her eldest daughter at UW, and it has something for everyone. Afterward she feels happy — like the family reconnected with their Hungarian roots while having fun.',
+              },
+              { label: 'Favorite brands', text: 'Sur La Table, Athleta, Madewell' },
+            ],
+          },
+          {
+            title: 'Abby',
+            subtitle: 'Age 20 — "The Reader"',
+            facts: [
+              {
+                label: 'Why her',
+                text: 'A University of Washington student who isn’t Hungarian and wants to learn about other cultures.',
+              },
+              {
+                label: 'Backstory',
+                text: 'A junior at UW studying HCDE. Loves reading, photography, and hiking, and is part of a literature club and an engineering club. Raised in California by Indian heritage parents, immersed in their culture.',
+              },
+              {
+                label: 'Resources',
+                text: 'Connects with her Indian heritage through nearby cultural events — UW clubs with cultural events and dances, and events her parents tell her about back home.',
+              },
+              {
+                label: 'Emotions',
+                text: 'Has enjoyed religious cultural celebrations in the past and is now excited to attend other cultures’ events — discovering new food, music, and things to do.',
+              },
+              {
+                label: 'Goals',
+                text: 'Wants to attend a culture festival with a friend for free (or pay for items there), reachable by public transit, with a real lineup and hands-on activities.',
+              },
+              {
+                label: 'Scenario',
+                text: 'Hears about a Hungarian festival at UW, talks her friends into going since it’s nearby and free, and enjoys performances and new foods while learning about the culture.',
+              },
+              { label: 'Favorite brands', text: 'Barnes & Noble, Brandy Melville, The North Face' },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Customer Journey',
+        paragraphs: [
+          'I chose to do my customer journey on Julia because I believe she is the most likely to seek out a Hungarian culture festival and bring people with her.',
+          'I noticed that having an affordable/free festival is important, as well as a clear website for it, clear signage at the festival, and an app with upcoming events clearly displayed for the user.',
+        ],
+        cards: [
+          {
+            title: 'Awareness',
+            facts: [
+              { label: 'Actions', text: 'Julia decides she wants to go to a Hungarian culture festival and starts looking for one nearby.' },
+              { label: 'Touch points', text: 'She searches online and asks friends if they’ve heard about any Hungarian culture festivals.' },
+              { label: 'Goals', text: 'She wants to find a friendly Hungarian culture festival that is nearby.' },
+              { label: 'Emotions', text: 'She feels excited to find something that works with her goals.' },
+              { label: 'Pain points', text: 'She is frustrated because there isn’t a good place to find events like this.' },
+              { label: 'Opportunity', text: 'A web app that you could use to search for festivals.' },
+            ],
+          },
+          {
+            title: 'Consideration',
+            facts: [
+              { label: 'Actions', text: 'Julia finds a Hungarian culture festival nearby and is considering if she should go.' },
+              { label: 'Touch points', text: 'She reads about what is included in the festival.' },
+              { label: 'Goals', text: 'She wants to be able to bring her friends and family with her to the festival.' },
+              { label: 'Emotions', text: 'She is unsure because she doesn’t know if her friends and family would enjoy coming, or if it’s affordable.' },
+              { label: 'Pain points', text: 'The festival has a lineup of artists during the day but isn’t very kid-friendly.' },
+              {
+                label: 'Opportunity',
+                text: 'A festival that runs day and evening to serve both families and adults, with workshops tailored to kids.',
+              },
+            ],
+          },
+          {
+            title: 'Purchase',
+            facts: [
+              { label: 'Actions', text: 'Julia decides she wants to go to this Hungarian culture festival, so she claims tickets.' },
+              { label: 'Touch points', text: 'She tries to purchase a ticket through the festival’s website.' },
+              {
+                label: 'Goals',
+                text: 'She wants to know she is correctly, easily, and safely purchasing tickets, and wants it to be affordable.',
+              },
+              {
+                label: 'Emotions',
+                text: 'She is apprehensive because she wants to make sure the site is safe and that she isn’t spending a lot of money.',
+              },
+              { label: 'Pain points', text: 'Tickets cost around $20, so she can’t afford to take her family and friends.' },
+              { label: 'Opportunity', text: 'A free-admission festival, so she doesn’t worry about cost or purchasing tickets incorrectly.' },
+            ],
+          },
+          {
+            title: 'Post-purchase',
+            facts: [
+              {
+                label: 'Actions',
+                text: 'Julia attends with her family and friends — participating in workshops, watching performances, and trying traditional food.',
+              },
+              {
+                label: 'Touch points',
+                text: 'She interacts with event staff, signs up for activities, uses the website or app for the schedule, and posts on social media.',
+              },
+              { label: 'Goals', text: 'She wants a fun, memorable experience, to feel welcomed, and to learn about Hungarian culture.' },
+              {
+                label: 'Emotions',
+                text: 'She feels happy, entertained, and connected to her culture (or a new one) — though disappointed if things don’t go well.',
+              },
+              {
+                label: 'Pain points',
+                text: 'Unclear signage or crowded spaces; workshops that are full or scheduled at inconvenient times.',
+              },
+              {
+                label: 'Opportunity',
+                text: 'Clear schedules, helpful staff, an easy-to-use event app or map, and captured feedback/social content during the event.',
+              },
+            ],
+          },
+          {
+            title: 'Retention',
+            facts: [
+              { label: 'Actions', text: 'Julia follows the festival’s social media pages and signs up for the newsletter to hear about future events.' },
+              { label: 'Touch points', text: 'She receives email updates, social media posts, and surveys about the festival experience.' },
+              { label: 'Goals', text: 'She wants to stay connected to similar events and experiences in the future.' },
+              { label: 'Emotions', text: 'She feels nostalgic about the good experience and is eager to attend again or share it with others.' },
+              { label: 'Pain points', text: 'She may lose interest if she doesn’t hear about future events or if there’s no follow-up engagement.' },
+              {
+                label: 'Opportunity',
+                text: 'Follow-up emails, early invites or discounts for future events, and a community page for attendees to connect.',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Wordmark',
+        paragraphs: [
+          'I wanted to convey a feeling of travel, adventure, and fun. To accomplish this, I chose a paper airplane mark alongside a script wordmark — the plane’s curly, looping path echoes the wordmark’s curly font, especially in the descender of the "y."',
+        ],
+      },
+      {
+        heading: 'Mood Board',
+        paragraphs: [
+          'I chose a variety of images that represent Hungarian culture — embroidery, traditional outfits, the coat of arms, and folk art — and wanted to carry most of these colors through into the festival itself.',
+        ],
+      },
+      {
+        heading: 'Colors',
+        paragraphs: [
+          'I wanted to convey a feeling of the Hungarian flag (red, white, and green), summer time, and vibrance. To accomplish this, I chose a tetradic color palette featuring red, green, light blue, and purple — bright, playful colors reflecting summer and vibrance, with green and red doubling as the colors of the flag.',
+          'For accessibility, the red reaches a 7:1 contrast ratio and the green reaches 5.99:1.',
+        ],
+        palette: [
+          {
+            label: 'Primary',
+            colors: [
+              { name: 'Red', hex: 'A6151A' },
+              { name: 'Green', hex: '146A4F' },
+              { name: 'Yellow', hex: 'FCCC5D' },
+            ],
+          },
+          {
+            label: 'Secondary',
+            colors: [
+              { name: 'Blue', hex: '416098' },
+              { name: 'Light red', hex: 'D28A8D' },
+              { name: 'Tan', hex: 'FFF4DB' },
+            ],
+          },
+          {
+            label: 'Tertiary',
+            colors: [
+              { name: 'White', hex: 'FFFFFF' },
+              { name: 'Black', hex: '000000' },
+              { name: 'Light green', hex: '8AB4A7' },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'Typography',
+        paragraphs: [
+          'I chose the font Cormorant to pair with the wordmark face, Taprom — Cormorant has a small x-height like Taprom and shares a similarly curled character in its descenders.',
+        ],
+        facts: [
+          { label: 'Wordmark font', text: 'Taprom' },
+          { label: 'Pairing font', text: 'Cormorant' },
+        ],
+      },
+      {
+        heading: 'Festival Poster',
+        paragraphs: [
+          'I chose to use my wordmark font, Taprom, for headlines and dates, and Cormorant for the rest.',
+          'I used size and spacing to convey importance — size mattered most. I also used angles to add movement, and boldness to help convey hierarchy.',
+        ],
+      },
+      {
+        heading: 'Festival Signage',
+        paragraphs: [
+          'For my signage, I chose primary directional signage because good directions are crucial for a festival spread out across campus. I designed a directions banner for 15th Ave NE that follows the color theme and incorporates the paper plane from the wordmark.',
+        ],
+      },
+      {
+        heading: 'Festival Map',
+        paragraphs: [
+          'I designed a map using the festival’s color scheme and venues, using circles to label its important aspects. Color draws attention to key points, and everything is labeled as clearly as possible to help colorblind visitors navigate.',
+        ],
+      },
+      {
+        heading: 'UI Style Tile',
+        paragraphs: [
+          'I used one primary and one secondary color so the primary colors would pop, avoiding red and green together due to color blindness and the stop-and-go signals they convey. For secondary buttons, I kept the same color borders for focused and active states for consistency. For text, I used yellow for errors so it would differ significantly from the other colors.',
+        ],
+      },
+      {
+        heading: 'User Flow',
+        paragraphs: [
+          'My user flow follows my persona Julia, who is purchasing merch for her family before the festival. I chose a merch-purchasing flow to get more practice prototyping in Figma — the flow allows the user to constantly change their mind about purchasing along the way.',
+        ],
+      },
+      {
+        heading: 'Wireframes and User Testing',
+        paragraphs: [
+          'I made several interfaces showing shopping for merch and adding it to a cart at the City Festival, including a page where you can see the merch up close — a critique I received in class.',
+        ],
+      },
+      {
+        heading: 'Mobile Interface',
+        paragraphs: [
+          'I chose to design an app focused on purchasing merchandise. There’s an animation linking the wordmark with the arrow mark, before taking the user to a home page where they scroll through the events and businesses at the festival. From there, they tap the basket in the nav bar to browse merch, select a piece with a color and size, and add it to the cart — then check out with a payment method and land on a confirmation page before returning home. I chose this flow to push my creative range, playing with smart animation, horizontal scrolling, and on-click interactions.',
+          'My initial design showed more merch per row, which drew feedback that it was hard to see everything and felt overwhelming — so I reduced each row to 2 items. I was also told there was a disconnect between the wordmark and the arrow at the top of each screen, so I designed an animation connecting the two.',
+          'For the overall design, I prioritized simplicity by breaking content into several screens, kept the primary colors true to the Hungarian flag, and carried the arrow mark and cream background across every screen for consistency.',
+        ],
+      },
+      {
+        heading: 'Final Prototype',
+        paragraphs: ['The full flow was prototyped and tested in Figma.'],
+      },
+      {
+        heading: 'Sources',
+        links: [
+          {
+            label: 'Franz Liszt — Public Domain Review',
+            href: 'https://publicdomainreview.org/essay/what-makes-franz-liszt-still-important/',
+          },
+          { label: 'Eszterlánc — HHF thank-you post', href: 'https://eszterlanc.com/thank-you-for-the-support-during-the-hhf/' },
+          { label: 'BJC — Oláh Kálmán Jr. Quartet', href: 'https://www.bjc.hu/gallery/olah-kalman-jr-quartet/' },
+          {
+            label: 'Rockbook — CAFB Szakácsi Greg Gábor zenekar',
+            href: 'https://www.rockbook.hu/sites/default/files/c.a.f.b._szakacsi_greg_gabor_cafb_zenekar.jpg',
+          },
+          {
+            label: 'The Guardian — Ernő Rubik interview',
+            href: 'https://www.theguardian.com/books/2020/sep/13/erno-rubik-the-cube-gives-me-hope-people-can-solve-their-problems-and-survive',
+          },
+          { label: 'Seattle Christmas Market — chimney cakes', href: 'https://seattlechristmasmarket.com/vendor/chimney-cakes/' },
+          { label: 'Chimney Cakes Seattle (Instagram)', href: 'https://www.instagram.com/chimneycakesseattle/' },
+          { label: 'Seattle Cserkész (Facebook)', href: 'https://www.facebook.com/SeattleCserkesz/' },
+          { label: 'Wikipedia — Pörkölt', href: 'https://en.wikipedia.org/wiki/P%C3%B6rk%C3%B6lt' },
+          { label: 'Google Search — Budapest bistro reference', href: 'https://www.google.com/search?q=budapest+bistro' },
         ],
       },
     ],

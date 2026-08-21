@@ -65,6 +65,74 @@ export function ProjectDetail() {
 
                 {section.paragraphs?.map((paragraph, j) => <p key={j}>{paragraph}</p>)}
 
+                {section.table && (
+                  <div className="case-study__table-wrap">
+                    <table className="case-study__table">
+                      <thead>
+                        <tr>
+                          <th scope="col" />
+                          {section.table.columns.map((col) => (
+                            <th scope="col" key={col}>
+                              {col}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {section.table.rows.map((row) => (
+                          <tr key={row.label}>
+                            <th scope="row">{row.label}</th>
+                            {row.values.map((value, v) => (
+                              <td key={v}>{value}</td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+
+                {section.cards && (
+                  <div className="case-study__cards">
+                    {section.cards.map((card) => (
+                      <div className="case-study__card" key={card.title}>
+                        <h3>{card.title}</h3>
+                        {card.subtitle && <p className="case-study__card-subtitle">{card.subtitle}</p>}
+                        <dl className="case-study__facts">
+                          {card.facts.map((fact) => (
+                            <div className="case-study__fact" key={fact.label}>
+                              <dt>{fact.label}</dt>
+                              <dd>{fact.text}</dd>
+                            </div>
+                          ))}
+                        </dl>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {section.palette && (
+                  <div className="case-study__palette">
+                    {section.palette.map((group) => (
+                      <div className="case-study__palette-group" key={group.label}>
+                        <p className="case-study__palette-label">{group.label}</p>
+                        <div className="case-study__swatches">
+                          {group.colors.map((color) => (
+                            <div className="case-study__swatch" key={color.hex}>
+                              <div
+                                className="case-study__swatch-color"
+                                style={{ background: `#${color.hex}` }}
+                              />
+                              <p className="case-study__swatch-name">{color.name}</p>
+                              <p className="case-study__swatch-hex">#{color.hex}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
                 {section.insights && (
                   <div className="case-study__insights">
                     {section.insights.title && <p className="case-study__insights-title">{section.insights.title}</p>}
