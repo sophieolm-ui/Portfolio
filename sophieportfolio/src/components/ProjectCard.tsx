@@ -13,7 +13,8 @@ export function ProjectCard({
 }) {
   const revealRef = useReveal<HTMLDivElement>()
   const parallaxRef = useParallax<HTMLDivElement>(0.12)
-  const contentParallaxRef = useParallax<HTMLDivElement>(-0.05)
+  const sideSpeed = index % 2 === 0 ? 0.65 : -0.65
+  const contentParallaxRef = useParallax<HTMLDivElement>(sideSpeed, 'x')
 
   return (
     <div className="project-panel reveal" ref={revealRef}>

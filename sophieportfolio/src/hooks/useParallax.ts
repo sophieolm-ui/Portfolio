@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { prefersReducedMotion } from './usePrefersReducedMotion'
 
-export function useParallax<T extends HTMLElement>(speed = 0.15) {
+export function useParallax<T extends HTMLElement>(speed = 0.15, axis: 'x' | 'y' = 'y') {
   const ref = useRef<T>(null)
 
   useEffect(() => {
@@ -9,6 +9,7 @@ export function useParallax<T extends HTMLElement>(speed = 0.15) {
     if (!el || prefersReducedMotion()) return
 
     let ticking = false
+    const prop = axis === 'x' ? '--parallax-x' : '--parallax-y'
 
     const update = () => {
       ticking = false
@@ -16,7 +17,7 @@ export function useParallax<T extends HTMLElement>(speed = 0.15) {
       const viewportCenter = window.innerHeight / 2
       const elementCenter = rect.top + rect.height / 2
       const offset = (viewportCenter - elementCenter) * speed
-      el.style.setProperty('--parallax-y', `${offset.toFixed(1)}px`)
+      el.style.setProperty(prop, `${offset.toFixed(1)}px`)
     }
 
     const onScroll = () => {
@@ -33,7 +34,7 @@ export function useParallax<T extends HTMLElement>(speed = 0.15) {
       window.removeEventListener('scroll', onScroll)
       window.removeEventListener('resize', onScroll)
     }
-  }, [speed])
+  }, [speed, axis])
 
   return ref
 }
