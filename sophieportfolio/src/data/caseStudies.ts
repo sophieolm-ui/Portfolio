@@ -744,4 +744,312 @@ export const caseStudies: Record<string, CaseStudy> = {
       },
     ],
   },
+
+  'trail-flow': {
+    tagline: 'A bridge between hydration and strategic planning for Burke-Gilman Trail users',
+    intro:
+      'TrailFlow is a mobile app that helps runners on the Burke-Gilman Trail locate water fountains, plan routes around them, and stay current on maintenance — designed over a 10-week HCDE course sequence at the University of Washington.',
+    sections: [
+      {
+        facts: [
+          { label: 'My role', text: 'UX Designer' },
+          { label: 'Duration', text: '10 weeks' },
+          { label: 'Tools', text: 'The Mill' },
+        ],
+      },
+      {
+        heading: 'About',
+        paragraphs: [
+          'Context: TrailFlow is a project developed as part of the upper-level undergraduate courses HCDE 302 and 303 in Human Centered Design & Engineering at the University of Washington during the 2024–2025 academic year. Over six months, our team focused on enhancing accessibility to water fountains along the Burke-Gilman Trail, aiming to improve the experience for those engaging in the trail’s activities.',
+        ],
+        facts: [
+          {
+            label: 'Problem statement',
+            text: '"How can we improve access to hydration for runners on the Burke-Gilman Trail while making it affordable and convenient?"',
+          },
+          {
+            label: 'Vision statement',
+            text: 'Our project envisions a future where access to hydration is seamless and convenient for all trail users. By designing an intuitive app, we aim to help users easily locate water fountains, plan routes, and stay informed about maintenance updates, ensuring a more enjoyable and well-hydrated experience on the trail.',
+          },
+        ],
+      },
+      {
+        heading: 'Research',
+        paragraphs: [
+          'Our research phase involved a competitive analysis of existing hydration solutions and interviews with four college students who run on the Burke-Gilman Trail. Through this process, we identified three key findings that shaped our ideation and design decisions, allowing us to focus on the most impactful user needs.',
+        ],
+        insights: {
+          title: 'Findings',
+          items: [
+            'Portability — did not like to carry anything on them for multiple reasons.',
+            'Hydration — consuming different forms of hydration to stay hydrated.',
+            'Safety — did not feel safe for various reasons during their run.',
+          ],
+        },
+      },
+      {
+        heading: 'User Personas',
+        paragraphs: [
+          'To gain a deeper understanding of our target users, we created detailed user personas based on our research insights. These personas — Jill and Jonny — helped us synthesize our findings and provided a reference point throughout the design process. Jonny, in particular, served as the foundation for our user journey map, ensuring our decisions were grounded in real user experiences.',
+        ],
+        cards: [
+          {
+            title: 'Jill Jones',
+            subtitle: 'UW student, Computer Science',
+            facts: [
+              {
+                label: 'Backstory',
+                text: 'Works in app development at REV. Runs daily for her mental and physical health, a habit from high school cross country and track. She tries to stay hydrated but sometimes forgets to drink enough water throughout the day, and struggles with dry mouth on long runs after taking energy gels. Prefers running at Greenlake but finds its water fountains crowded or inconvenient at peak times.',
+              },
+              { label: 'Resources', text: 'Uses Google Maps to look at a map.' },
+              {
+                label: 'Goals',
+                text: 'Training for the Boston Marathon after qualifying at the Eugene Marathon last year. Stays hydrated throughout her day. Looks for routes to complete workouts on, including hills to train for the hilly Seattle Half Marathon.',
+              },
+              {
+                label: 'Pain points',
+                text: 'Schedules runs at Greenlake because of the number of fountains there — the only fountains on the Burke-Gilman are near the Brooks store, Gasworks Park, outside Trailside, and outside U-Village. Not a fan of the hikers on the Burke, and has had issues with cars crossing it.',
+              },
+            ],
+          },
+          {
+            title: 'Jonny Jones',
+            subtitle: 'UW student, Bioengineering',
+            facts: [
+              {
+                label: 'Backstory',
+                text: 'Works at GAP in U-Village. A marathon trainee seeking competition after high school basketball and baseball, drinking about half a gallon of water daily but often forgetting. Runs marathons most weekends and shorter runs between weekday classes, often feeling dehydrated on long runs because he forgets to hydrate the night before. Completes long runs with friends for motivation.',
+              },
+              { label: 'Resources', text: 'Uses Strava to track runs.' },
+              {
+                label: 'Goals',
+                text: 'Training for a sub-3-hour Seattle Marathon. Wants to stay healthy and hydrated, and include many hills in his routes to train for the hilly course.',
+              },
+              {
+                label: 'Pain points',
+                text: 'Gets dehydrated on weekend long runs after forgetting to drink water the night before. Struggles to find functional water fountains on the Burke-Gilman (three never work) and is forced to stop at stores. Often gets bored on long runs on the Burke.',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        heading: 'User Journey Maps',
+        paragraphs: [
+          'Our user journey map for Jonny Jones outlined the marathon training experience, highlighting key actions, thoughts, and emotions across five phases — Awareness, Consideration, Activity, After, and Post Thoughts. This visualization helped us identify major pain points and opportunities to enhance the user experience, ensuring our design addressed the real challenges runners face. It became a structured framework we referred back to throughout the design process, keeping our solutions aligned with user needs and expectations.',
+        ],
+      },
+      {
+        heading: 'Design Requirements',
+        paragraphs: [
+          'Our design requirements established clear guidelines for our product’s features and functionalities, providing a roadmap to ensure TrailFlow met both user needs and product goals. These requirements, directly informed by our research and personas, helped us create wireframes and prototypes that remained user-centered.',
+          'Following our design review, we recognized that implementing all design requirements would be challenging. As a result, we prioritized four key aspects — Locate, Usability, Updates, and Maintenance — focusing on the most essential elements to deliver a functional and impactful solution.',
+        ],
+        insights: {
+          items: [
+            'Locate — enable runners to locate the nearest hydration source.',
+            'Usability — design the system to be intuitive and user-friendly.',
+            'Updates — offer real-time updates on hydration source functionality.',
+            'Maintenance — facilitate rapid reporting and resolution of issues.',
+          ],
+        },
+      },
+      {
+        heading: 'Ideation — Storyboards',
+        paragraphs: [
+          'With our research and design framework in place, we transitioned into the ideation phase to envision what TrailFlow could look like. Our storyboards illustrated potential user interactions, focusing on specific use cases of runners on the Burke-Gilman Trail. We created three distinct storyboards to explore different user journeys and demonstrate how our product effectively addresses hydration challenges.',
+        ],
+        facts: [
+          {
+            label: 'Storyboard 1 — App',
+            text: 'An app would allow users to find the nearest water fountain to their location, and plan their run to see where the fountains are located.',
+          },
+          {
+            label: 'Storyboard 2 — Signage',
+            text: 'Signage would be posted at the beginning, end, and throughout the trail, showing where water fountains are located — so runners don’t have to rely on a mobile device during their runs.',
+          },
+          {
+            label: 'Storyboard 3 — Winterized fountains with a pedal',
+            text: 'Fountains would be winterized to work year-round, with a pedal so individuals who can’t use the button can still access water.',
+          },
+        ],
+      },
+      {
+        paragraphs: ['After a design review with industry experts, we agreed that the mobile app was the most promising idea.'],
+      },
+      {
+        heading: 'Information Architecture',
+        paragraphs: [
+          'With our final design solution — TrailFlow, a hydration app — decided, we created an information architecture to define the overall structure of our product. This framework helped us map out navigation and user flows, integrating both digital and physical aspects of the experience.',
+          'Building on our research findings and storyboards, we translated user needs into a structured blueprint for the app’s interface: Open App → Map of Water Fountains (home page), branching into Location (nearest fountain by distance, or select a fountain), Draw Route (search), and Settings (Help/Contact us, Maintenance). This information architecture served as a critical reference point during the wireframing stage, ensuring our designs aligned with user expectations.',
+        ],
+      },
+      {
+        heading: 'Wireframes / User Flows',
+        paragraphs: [
+          'To bring our information architecture to life, we began experimenting with digital wireframing to develop user flows. Our team created multiple iterations of the product, refining screen layouts and interactions to enhance usability.',
+          'These interaction sketches laid the foundation for our wireframes and user flows, which included key features such as route mapping, settings, and location toggles. This phase was essential in establishing a concrete structure for our prototype, allowing us to iterate through low-, medium-, and high-fidelity designs.',
+        ],
+      },
+      {
+        heading: 'Design — Low Fidelity',
+        paragraphs: [
+          'For our low-fidelity prototype, we created a digital prototype based on our established information architecture and user flows. This early version focused on core interactions to test usability and gather initial feedback.',
+        ],
+      },
+      {
+        heading: 'Usability Testing — Round 1',
+        paragraphs: [
+          'We then conducted usability testing with four participants who had never seen our product before. Our goal was to collect real user feedback to identify potential improvements. This testing provided valuable insights that informed key changes for our mid-fidelity prototype:',
+        ],
+        insights: {
+          items: [
+            '"When I turn on my location, I want to know how far the water fountain is from me."',
+            '"I want a photo of the water fountain when I click on it, or some information about it."',
+            '"Planning the route is very helpful since you cannot really plan on Google Maps, although I cannot zoom in, so it is a little hard to see the surrounding areas."',
+            '"A compass would be nice since it is a map."',
+          ],
+        },
+      },
+      {
+        heading: 'Design — Mid Fidelity',
+        paragraphs: [
+          'Following the low-fidelity usability tests, our team refined the prototype for the mid-fidelity stage. This version introduced limited functionality and color while maintaining interactive elements. Iterating at this stage allowed us to further develop our design ideas before conducting another round of usability testing.',
+        ],
+        insights: {
+          title: 'Changes from low-fi to mid-fi',
+          items: [
+            'Showing the distance in miles to the water fountain when the user turns on their location.',
+            'Showing information about the water fountain when the user clicks on it.',
+            'Adding a compass.',
+            'Making the maintenance page more interactive and easier to use when in a rush.',
+          ],
+        },
+      },
+      {
+        heading: 'Usability Testing — Round 2',
+        paragraphs: [
+          'Based on user insights from our first usability test, we implemented several key changes to enhance the user experience, then shared the mid-fidelity prototype with four new participants for fresh perspectives. Their feedback was constructive and positive, offering additional areas for improvement.',
+        ],
+        insights: {
+          items: [
+            '"Finding the water fountain closest to my location was intuitive."',
+            '"Planning was a little confusing because it already had a route for me."',
+            '"I am unable to zoom in to plan the route or locate the nearest water fountain."',
+          ],
+        },
+      },
+      {
+        paragraphs: [
+          'These insights played a crucial role in shaping our high-fidelity prototype and, ultimately, the final version of our product. This final iteration was prepared for presentation to our class and industry professionals, ensuring our design was both user-centered and refined.',
+        ],
+      },
+      {
+        heading: 'Design — High Fidelity',
+        paragraphs: [
+          'After conducting usability testing on our mid-fidelity prototype, our team refined the design for the high-fidelity stage. This phase focused on enhancing interactions, improving aesthetics, and making the interface more visually appealing and polished.',
+        ],
+        insights: {
+          title: 'Changes from mid-fi to high-fi',
+          items: [
+            'Added a zoom in/out feature.',
+            'Let users plan their route by clicking two locations on it.',
+            'Added more color.',
+            'More consistent icons and buttons.',
+          ],
+        },
+      },
+      {
+        heading: 'Design Review',
+        paragraphs: [
+          'For our final design presentation, we showcased our completed prototype to peers and industry professionals. This presentation was an opportunity to demonstrate our design process, highlight key insights, and gather valuable feedback to further refine our work.',
+        ],
+        insights: {
+          title: 'Feedback from design review',
+          items: [
+            'Good on maintenance — users might also want to submit a photo of the fountain.',
+            'Users might want to connect the app to a watch.',
+            'It is a simple prototype.',
+          ],
+        },
+      },
+      {
+        heading: 'Reflecting Back',
+        paragraphs: [
+          'Over the course of this 20-week project, we gained valuable insights into collaboration, design rationale, and interactive design. This experience reinforced the importance of thoughtful decision-making and user-centered design.',
+          'Our team worked exceptionally well together, thanks to our commitment to clear communication and effective time management. By ensuring assignments were completed on time and with attention to detail, we created a strong foundation for success — skills we aim to carry forward into future projects.',
+          'One of the biggest challenges we faced was articulating the depth behind our design decisions. While we could explain our choices at a high level, diving deeper into the reasoning behind them required more effort. This process helped us refine our ability to communicate design rationale more effectively.',
+        ],
+      },
+      {
+        heading: 'Looking Forward',
+        paragraphs: [
+          'Looking ahead, we see opportunities to make TrailFlow even more accessible by incorporating features such as voice commands, dark mode, and additional interactions. These improvements would enhance usability and ensure a more inclusive experience for all users.',
+          'Overall, this project was a success, and we are proud of the work we accomplished.',
+        ],
+      },
+    ],
+  },
+
+  sensigo: {
+    tagline: 'Voice-first repair documentation for automotive technicians',
+    intro:
+      'A mobile app that helps automotive technicians view repair plans and efficiently document their work using voice notes — reducing manual data entry and improving the accuracy of service documentation for warranty and compliance.',
+    sections: [
+      {
+        facts: [
+          { label: 'Role', text: 'UX Designer' },
+          { label: 'Platform', text: 'Mobile (iOS)' },
+          { label: 'Focus', text: 'Workflow optimization, voice interaction, field usability' },
+        ],
+      },
+      {
+        heading: 'Problem',
+        paragraphs: [
+          'Technicians often work in physically demanding, time-sensitive environments where typing detailed repair notes is impractical. Existing systems required excessive manual input, leading to incomplete documentation, errors, and frustration — especially when notes were needed for warranty submissions or follow-up diagnostics.',
+        ],
+      },
+      {
+        heading: 'Solution',
+        paragraphs: ['The app enables technicians to:'],
+        insights: {
+          items: [
+            'View structured repair plans and customer complaints in one place.',
+            'Record voice notes during or after repairs.',
+            'Automatically convert voice recordings into organized, editable text summaries.',
+            'Review, refine, and submit notes with confidence.',
+          ],
+        },
+      },
+      {
+        insights: {
+          title: 'Key design decisions',
+          items: [
+            'Voice-first interaction to support hands-free use in the workshop.',
+            'Clear information hierarchy for repair steps, actions performed, and parts used.',
+            'Progressive disclosure to keep screens readable while allowing detailed review.',
+            'Confirmation and completion states to prevent accidental submissions.',
+          ],
+        },
+      },
+      {
+        heading: 'Outcome & Impact',
+        paragraphs: [
+          'The final design streamlines the documentation workflow, helping technicians complete notes faster while maintaining high-quality records. By integrating voice input with structured summaries, the app bridges the gap between real-world repair work and accurate digital reporting — improving efficiency, reducing errors, and supporting smoother warranty submissions.',
+        ],
+      },
+      {
+        heading: 'Key Skills Demonstrated',
+        insights: {
+          items: [
+            'Mobile UX & interaction design',
+            'Voice UX and multimodal input',
+            'Workflow analysis for field workers',
+            'Information architecture & content hierarchy',
+            'Designing for constrained, real-world environments',
+          ],
+        },
+      },
+    ],
+  },
 }
