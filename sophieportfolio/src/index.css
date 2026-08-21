@@ -434,6 +434,10 @@ h3 {
   text-align: center;
   padding: 32px;
   max-width: 640px;
+}
+
+.project-panel__lead,
+.project-panel__trail {
   transform: translateX(var(--parallax-x, 0px));
   will-change: transform;
 }

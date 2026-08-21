@@ -13,8 +13,9 @@ export function ProjectCard({
 }) {
   const revealRef = useReveal<HTMLDivElement>()
   const parallaxRef = useParallax<HTMLDivElement>(0.12)
-  const sideSpeed = index % 2 === 0 ? 0.65 : -0.65
-  const contentParallaxRef = useParallax<HTMLDivElement>(sideSpeed, 'x')
+  const sideSign = index % 2 === 0 ? 1 : -1
+  const leadRef = useParallax<HTMLDivElement>(0.65 * sideSign, 'x')
+  const trailRef = useParallax<HTMLDivElement>(-0.65 * sideSign, 'x')
 
   return (
     <div className="project-panel reveal" ref={revealRef}>
@@ -31,24 +32,28 @@ export function ProjectCard({
         )}
       </div>
       <div className="project-panel__scrim" aria-hidden="true" />
-      <div className="project-panel__content" ref={contentParallaxRef}>
-        <p className="project-panel__meta">
-          {project.year} / {project.tag}
-        </p>
-        <h3 className="project-panel__name">{project.name}</h3>
-        <p className="project-panel__desc">{project.summary}</p>
-        <Link to={`/projects/${project.slug}`} className="project-panel__link">
-          View project
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path
-              d="M3.5 8h9m0 0-3.5-3.5M12.5 8 9 11.5"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </Link>
+      <div className="project-panel__content">
+        <div className="project-panel__lead" ref={leadRef}>
+          <p className="project-panel__meta">
+            {project.year} / {project.tag}
+          </p>
+          <h3 className="project-panel__name">{project.name}</h3>
+        </div>
+        <div className="project-panel__trail" ref={trailRef}>
+          <p className="project-panel__desc">{project.summary}</p>
+          <Link to={`/projects/${project.slug}`} className="project-panel__link">
+            View project
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path
+                d="M3.5 8h9m0 0-3.5-3.5M12.5 8 9 11.5"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </Link>
+        </div>
       </div>
     </div>
   )
