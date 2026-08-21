@@ -13,6 +13,7 @@ export function ProjectCard({
 }) {
   const revealRef = useReveal<HTMLDivElement>()
   const parallaxRef = useParallax<HTMLDivElement>(0.12)
+  const contentParallaxRef = useParallax<HTMLDivElement>(-0.05)
 
   return (
     <div className="project-panel reveal" ref={revealRef}>
@@ -29,7 +30,7 @@ export function ProjectCard({
         )}
       </div>
       <div className="project-panel__scrim" aria-hidden="true" />
-      <div className="project-panel__content">
+      <div className="project-panel__content" ref={contentParallaxRef}>
         <p className="project-panel__meta">
           {project.year} / {project.tag}
         </p>

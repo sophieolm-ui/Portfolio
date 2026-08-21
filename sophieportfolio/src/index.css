@@ -434,6 +434,8 @@ h3 {
   text-align: center;
   padding: 32px;
   max-width: 640px;
+  transform: translateY(var(--parallax-y, 0px));
+  will-change: transform;
 }
 
 .project-panel__meta {
