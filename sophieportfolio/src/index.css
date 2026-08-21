@@ -462,14 +462,6 @@ h3 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.project-panel__desc {
-  margin: 24px auto 0;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 44ch;
-}
-
 .project-panel__link {
   margin-top: 28px;
   display: inline-flex;

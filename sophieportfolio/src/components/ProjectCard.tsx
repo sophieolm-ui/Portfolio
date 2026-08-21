@@ -40,7 +40,6 @@ export function ProjectCard({
           <h3 className="project-panel__name">{project.name}</h3>
         </div>
         <div className="project-panel__trail" ref={trailRef}>
-          <p className="project-panel__desc">{project.summary}</p>
           <Link to={`/projects/${project.slug}`} className="project-panel__link">
             View project
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
