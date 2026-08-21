@@ -1,5 +1,4 @@
 import { useReveal } from '../hooks/useReveal'
-import { useParallax } from '../hooks/useParallax'
 import { StatCounter } from './StatCounter'
 import { PortraitPlaceholder } from './PortraitPlaceholder'
 import { SectionLabel } from './SectionLabel'
@@ -7,7 +6,6 @@ import { portraitImage } from '../data/site'
 
 export function AboutSection() {
   const ref = useReveal<HTMLDivElement>()
-  const parallaxRef = useParallax<HTMLDivElement>(0.1)
 
   return (
     <section id="about" className="about-section">
@@ -35,7 +33,7 @@ export function AboutSection() {
             </dl>
           </div>
           <div className="about-portrait">
-            <div className="about-portrait__inner" ref={parallaxRef}>
+            <div className="about-portrait__inner">
               {portraitImage ? (
                 <img src={portraitImage} alt="Sophie Messer" className="about-portrait__img" />
               ) : (
