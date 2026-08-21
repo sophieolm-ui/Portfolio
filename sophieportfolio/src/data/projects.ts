@@ -26,7 +26,7 @@ export const projects: Project[] = [
     cardBg: '#2b2138',
     art: 'sensigo',
     artInk: 'light',
-    // image: '/images/projects/sensigo-hero.jpg',
+    image: '/images/projects/sensigo-cover.png',
   },
   {
     slug: 'glowtap',
