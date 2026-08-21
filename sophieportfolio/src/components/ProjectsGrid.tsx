@@ -12,8 +12,7 @@ export function ProjectsGrid() {
         <div className="reveal" ref={headingRef}>
           <SectionLabel number="01" label="Work" />
           <div className="section-heading">
-            <h2>Selected work</h2>
-            <p>A few products I've designed, researched, and shipped.</p>
+            <h2>Selected Projects</h2>
           </div>
         </div>
       </div>
