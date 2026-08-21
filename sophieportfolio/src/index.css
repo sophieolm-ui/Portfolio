@@ -683,6 +683,144 @@ h3 {
   max-width: 60ch;
 }
 
+/* Case study */
+
+.case-study {
+  margin-top: 28px;
+  max-width: 72ch;
+}
+
+.case-study__tagline {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 1.1rem;
+  margin: 0 0 12px;
+}
+
+.case-study__intro {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 0 0 56px;
+}
+
+.case-study__section {
+  margin-bottom: 40px;
+}
+
+.case-study__section h2 {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 18px;
+}
+
+.case-study__section p {
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin: 0 0 16px;
+}
+
+.case-study__section p:last-child {
+  margin-bottom: 0;
+}
+
+.case-study__facts {
+  display: grid;
+  gap: 14px;
+  border: 1px solid var(--line);
+  background: var(--accent-soft);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  margin: 0 0 20px;
+}
+
+.case-study__fact {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .case-study__fact {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
+.case-study__fact dt {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.case-study__fact dd {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.case-study__insights {
+  border-left: 2px solid var(--line);
+  padding-left: 20px;
+  margin: 0 0 20px;
+}
+
+.case-study__insights-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+.case-study__insights ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.case-study__insights li {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.case-study__links {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.case-study__links a {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.case-study__links a:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
 /* Section label (numbered eyebrow) */
 
 .section-label {
