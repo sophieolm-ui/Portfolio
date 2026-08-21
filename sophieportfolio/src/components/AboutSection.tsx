@@ -23,9 +23,9 @@ export function AboutSection() {
             <p>
               I've also always wanted to help others — through the years I've
               made myself more familiar with technology while discovering my
-              passion for <strong>psychology</strong>. There are many ways
-              technology can be improved to maximize the number of people who
-              can access it, both through engineering and psychology.
+              passion for psychology. There are many ways technology can be
+              improved to maximize the number of people who can access it,
+              both through engineering and psychology.
             </p>
             <dl className="about-stats">
               <StatCounter target={4} suffix="+" label="Shipped products" />
