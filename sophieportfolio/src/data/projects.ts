@@ -12,6 +12,8 @@ export interface Project {
   /** Path under public/, e.g. '/images/projects/sensigo-hero.jpg'. Once set, this
    * replaces the abstract placeholder art on both the work panel and detail page. */
   image?: string
+  /** CSS object-position for `image`, e.g. 'center bottom'. Defaults to 'center'. */
+  imagePosition?: string
 }
 
 // Placeholder data carried over from the existing site structure.
@@ -27,6 +29,7 @@ export const projects: Project[] = [
     art: 'sensigo',
     artInk: 'light',
     image: '/images/projects/sensigo-cover.png',
+    imagePosition: 'center bottom',
   },
   {
     slug: 'foreflight-social',

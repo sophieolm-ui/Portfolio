@@ -35,7 +35,12 @@ export function ProjectDetail() {
           style={{ background: project.cardBg }}
         >
           {project.image ? (
-            <img src={project.image} alt="" className="project-detail__img" />
+            <img
+              src={project.image}
+              alt=""
+              className="project-detail__img"
+              style={{ objectPosition: project.imagePosition ?? 'center' }}
+            />
           ) : (
             <ProjectArt variant={project.art} ink={project.artInk} />
           )}

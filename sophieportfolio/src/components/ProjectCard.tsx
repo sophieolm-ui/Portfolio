@@ -26,7 +26,12 @@ export function ProjectCard({
         ref={parallaxRef}
       >
         {project.image ? (
-          <img src={project.image} alt="" className="project-panel__img" />
+          <img
+            src={project.image}
+            alt=""
+            className="project-panel__img"
+            style={{ objectPosition: project.imagePosition ?? 'center' }}
+          />
         ) : (
           <ProjectArt variant={project.art} ink={project.artInk} />
         )}
