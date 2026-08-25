@@ -66,11 +66,32 @@ function TrailArt({ ink }: { ink: string }) {
   )
 }
 
+function ArusArt({ ink }: { ink: string }) {
+  return (
+    <svg viewBox="0 0 400 300" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+      <circle cx="335" cy="55" r="22" fill={ink} opacity="0.18" />
+      <circle cx="335" cy="55" r="22" fill="none" stroke={ink} strokeOpacity="0.5" strokeWidth="1.5" />
+      {[100, 155, 210, 265].map((y, i) => (
+        <path
+          key={y}
+          d={`M-10 ${y} C 60 ${y - 26}, 100 ${y + 26}, 170 ${y} S 280 ${y - 26}, 340 ${y} S 400 ${y + 12}, 410 ${y}`}
+          fill="none"
+          stroke={ink}
+          strokeOpacity={0.14 + i * 0.09}
+          strokeWidth="2.5"
+          strokeLinecap="round"
+        />
+      ))}
+    </svg>
+  )
+}
+
 const ARTS: Record<ProjectArtVariant, (props: { ink: string }) => React.JSX.Element> = {
   sensigo: SensigoArt,
   glowtap: GlowTapArt,
   city: CityArt,
   trail: TrailArt,
+  arus: ArusArt,
 }
 
 export function ProjectArt({

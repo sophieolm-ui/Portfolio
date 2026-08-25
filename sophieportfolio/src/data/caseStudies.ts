@@ -1052,4 +1052,49 @@ export const caseStudies: Record<string, CaseStudy> = {
       },
     ],
   },
+
+  arus: {
+    tagline: 'A solar-powered cold chain for Indonesia’s small-scale fishers',
+    intro:
+      'ARUS is a solar-powered cold-chain ecosystem designed during the Global Challenge Lab 2026, a two-week virtual innovation program through Imperial Enterprise Lab, in response to the prompt: "How might we build a more climate-resilient and sustainable future for all?"',
+    sections: [
+      {
+        facts: [
+          { label: 'Program', text: 'Global Challenge Lab 2026 — Imperial Enterprise Lab' },
+          { label: 'Duration', text: '2 weeks' },
+          { label: 'Team', text: 'Green Frontier' },
+        ],
+      },
+      {
+        heading: 'Team — Green Frontier',
+        paragraphs: [
+          'Our team, Green Frontier, consisted of myself, Andrew Bernhardt Nugroho, Peter Kastner, Omkar Shirke, and Catherine Huang. We each brought diverse backgrounds in energy systems, renewables, chemical engineering, and behavioral design, and worked across several time zones to create a design that was both meaningful and impactful.',
+        ],
+      },
+      {
+        heading: 'The Problem',
+        paragraphs: [
+          'Andrew, who is Indonesian, brought to our attention the challenges facing fisheries in Indonesia. Indonesia’s fisheries sector is the cornerstone of both local livelihoods and the national economy, yet it continues to face a fundamental infrastructure gap: access to reliable cold chain infrastructure for preserving fish and maintaining quality. This causes Indonesia’s small-scale fishers to lose up to a third of every catch before it reaches the market.',
+        ],
+      },
+      {
+        heading: 'The Solution — ARUS',
+        paragraphs: [
+          'Our solution is ARUS, a solar-powered cold-chain ecosystem that combines ice production and storage for small-scale fishers in Eastern Indonesia. We propose deploying solar-powered cold storage sites equipped with integrated sensors to ensure the fish stays fresh throughout storage and transport, providing the fisher with a freshness certificate. We expect that within four years, fishers will earn up to 25% more by reducing post-harvest spoilage.',
+        ],
+      },
+      {
+        heading: 'My Contribution',
+        paragraphs: [
+          'My role focused on ensuring this solution would realistically help and benefit local fishers. After researching Indonesian fishing communities, I asked my group questions like: "How do we make sure fishers know how to use ARUS, and how do we design for fishers who don’t have smartphones?" This helped steer our solution toward being intuitive and effective.',
+        ],
+      },
+      {
+        heading: 'Next Steps',
+        paragraphs: [
+          'If we continue to work on this project, my next step would be to conduct interviews with the Indonesian fishing communities to validate our assumptions and better understand their needs.',
+        ],
+      },
+    ],
+  },
 }

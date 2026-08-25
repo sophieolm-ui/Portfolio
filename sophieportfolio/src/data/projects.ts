@@ -1,4 +1,4 @@
-export type ProjectArtVariant = 'sensigo' | 'glowtap' | 'city' | 'trail'
+export type ProjectArtVariant = 'sensigo' | 'glowtap' | 'city' | 'trail' | 'arus'
 
 export interface Project {
   slug: string
@@ -56,6 +56,16 @@ export const projects: Project[] = [
     summary: 'Case study coming soon.',
     cardBg: '#6f9a4c',
     art: 'trail',
+    artInk: 'light',
+  },
+  {
+    slug: 'arus',
+    name: 'ARUS',
+    year: '2026',
+    tag: 'Sustainability · Systems design',
+    summary: 'Case study coming soon.',
+    cardBg: '#1d5c66',
+    art: 'arus',
     artInk: 'light',
   },
 ]
