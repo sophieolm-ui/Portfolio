@@ -60,6 +60,7 @@ export const projects: Project[] = [
     cardBg: '#f6c7d2',
     art: 'city',
     artInk: 'dark',
+    image: '/images/projects/city-cover.png',
   },
   {
     slug: 'trail-flow',
