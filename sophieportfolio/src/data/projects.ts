@@ -1,4 +1,4 @@
-export type ProjectArtVariant = 'sensigo' | 'glowtap' | 'city' | 'trail' | 'arus'
+export type ProjectArtVariant = 'sensigo' | 'glowtap' | 'city' | 'trail' | 'arus' | 'foreflight'
 
 export interface Project {
   slug: string
@@ -27,6 +27,16 @@ export const projects: Project[] = [
     art: 'sensigo',
     artInk: 'light',
     image: '/images/projects/sensigo-cover.png',
+  },
+  {
+    slug: 'foreflight-social',
+    name: 'ForeFlight Social',
+    year: '2026',
+    tag: 'Mobile · UX research',
+    summary: 'Case study coming soon.',
+    cardBg: '#22405f',
+    art: 'foreflight',
+    artInk: 'light',
   },
   {
     slug: 'glowtap',

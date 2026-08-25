@@ -86,12 +86,34 @@ function ArusArt({ ink }: { ink: string }) {
   )
 }
 
+function ForeFlightArt({ ink }: { ink: string }) {
+  return (
+    <svg viewBox="0 0 400 300" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+      <path
+        d="M20 260 Q 150 40, 380 90"
+        fill="none"
+        stroke={ink}
+        strokeOpacity="0.45"
+        strokeWidth="2"
+        strokeDasharray="2 11"
+        strokeLinecap="round"
+      />
+      <circle cx="20" cy="260" r="5" fill={ink} opacity="0.85" />
+      <circle cx="185" cy="115" r="4" fill={ink} opacity="0.6" />
+      <circle cx="380" cy="90" r="6" fill={ink} opacity="0.95" />
+      <circle cx="380" cy="90" r="18" fill="none" stroke={ink} strokeOpacity="0.35" strokeWidth="1.5" />
+      <circle cx="380" cy="90" r="30" fill="none" stroke={ink} strokeOpacity="0.2" strokeWidth="1.5" />
+    </svg>
+  )
+}
+
 const ARTS: Record<ProjectArtVariant, (props: { ink: string }) => React.JSX.Element> = {
   sensigo: SensigoArt,
   glowtap: GlowTapArt,
   city: CityArt,
   trail: TrailArt,
   arus: ArusArt,
+  foreflight: ForeFlightArt,
 }
 
 export function ProjectArt({

@@ -1097,4 +1097,80 @@ export const caseStudies: Record<string, CaseStudy> = {
       },
     ],
   },
+
+  'foreflight-social': {
+    tagline: 'Bringing community-driven flight knowledge into ForeFlight',
+    intro:
+      'A 6-month capstone with Jeppesen ForeFlight, the industry-standard Electronic Flight Bag used by general aviation, business, and military pilots worldwide, exploring how ForeFlight can integrate its pilot community directly into the flight-planning experience.',
+    sections: [
+      {
+        facts: [
+          { label: 'Partner', text: 'Jeppesen ForeFlight' },
+          { label: 'Duration', text: '6 months' },
+          { label: 'Program', text: 'University of Washington HCDE Capstone' },
+        ],
+      },
+      {
+        heading: 'The Opportunity',
+        paragraphs: [
+          'Currently, general aviation pilots connect and share aviation knowledge outside ForeFlight, which makes the collaboration process feel separate from the flight-planning experience. Our project explored how ForeFlight can integrate the community into its design.',
+        ],
+      },
+      {
+        heading: 'Research',
+        paragraphs: [
+          'After extensive research and a survey of 26 general aviation (GA) pilots who use ForeFlight, we conducted 9 interviews. This process was extremely eye-opening.',
+        ],
+        insights: {
+          title: 'Findings',
+          items: [
+            'GA pilots rely heavily on airport-specific tips, often passed along through experience or word of mouth.',
+            'GA pilots value getting advice from their peers, but want to know that advice is coming from credible or experienced sources.',
+            'GA pilots want peer insights that go beyond what ForeFlight already provides, especially for non-standard or specific topic information.',
+          ],
+        },
+      },
+      {
+        heading: 'Ideation & Prototyping',
+        paragraphs: [
+          'To design a usable, helpful prototype, we created an ideation matrix with 25+ unique ideas, conducted 5 concept and usability tests, and ran 3 rounds of prototyping.',
+        ],
+      },
+      {
+        heading: 'The Solution',
+        paragraphs: ['Our final prototype consists of three main features:'],
+      },
+      {
+        facts: [
+          {
+            label: 'Map',
+            text: 'Airport-specific tips and local context from pilots who have flown there before.',
+          },
+          {
+            label: 'Profile',
+            text: 'Displays pilot credentials, experience, and verification signals to help users judge credibility.',
+          },
+          {
+            label: 'Forum',
+            text: 'Lets pilots curate forums tailored to their experience level, aircraft type, and flying interests.',
+          },
+        ],
+      },
+      {
+        heading: 'Handoff & Outcome',
+        paragraphs: [
+          'We had our final meeting with ForeFlight and handed off our research and prototype to them. They are looking into how they might incorporate it into their current design system.',
+          'It was a rewarding experience getting to present our project at the University of Washington Human Centered Design & Engineering Capstone Showcase.',
+        ],
+        links: [{ label: 'Project overview video', href: 'https://lnkd.in/gCG6-vdT' }],
+      },
+      {
+        heading: 'Acknowledgments',
+        paragraphs: [
+          'I am immensely thankful to Kara Cox and Jeremy Miller for their support and feedback throughout this process, and a big thank you to Alan Marks for his mentorship along the way.',
+          'I’m also extremely grateful to my group members Natalie Enman, Emma Robins, and Siya Mistry — thank you for being such amazing and hard-working group members. I enjoyed working with you and learned so much from all of you.',
+        ],
+      },
+    ],
+  },
 }
