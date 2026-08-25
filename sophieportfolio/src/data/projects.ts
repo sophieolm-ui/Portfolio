@@ -29,7 +29,7 @@ export const projects: Project[] = [
     art: 'sensigo',
     artInk: 'light',
     image: '/images/projects/sensigo-cover.png',
-    imagePosition: 'center bottom',
+    imagePosition: 'left bottom',
   },
   {
     slug: 'foreflight-social',
