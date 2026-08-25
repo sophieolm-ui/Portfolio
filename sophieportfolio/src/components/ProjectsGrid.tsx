@@ -10,7 +10,7 @@ export function ProjectsGrid() {
     <section id="work" className="work-section">
       <div className="container">
         <div className="reveal" ref={headingRef}>
-          <SectionLabel number="01" label="Work" />
+          <SectionLabel number="01" label="Projects" />
           <div className="section-heading">
             <h2>Selected Projects</h2>
           </div>
