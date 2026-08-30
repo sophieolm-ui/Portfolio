@@ -81,5 +81,7 @@ export const projects: Project[] = [
     cardBg: '#1d5c66',
     art: 'arus',
     artInk: 'light',
+    image: '/images/projects/arus-banner.png',
+    imagePosition: 'right center',
   },
 ]
