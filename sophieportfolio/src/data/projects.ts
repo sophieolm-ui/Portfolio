@@ -104,6 +104,6 @@ export const projects: Project[] = [
     cardBg: '#7a2f3d',
     art: 'london',
     artInk: 'light',
-    image: '/images/projects/london-cover.jpg',
+    cardImage: '/images/projects/london-cover.jpg',
   },
 ]

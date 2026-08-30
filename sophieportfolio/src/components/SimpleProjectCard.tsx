@@ -9,7 +9,7 @@ export function SimpleProjectCard({ project }: { project: Project }) {
   return (
     <Link to={`/projects/${project.slug}`} className="simple-card reveal" ref={revealRef}>
       <div className="simple-card__media" style={{ background: project.cardBg }}>
-        {project.image ? (
+        {project.cardImage ?? project.image ? (
           <img
             src={project.cardImage ?? project.image}
             alt=""
