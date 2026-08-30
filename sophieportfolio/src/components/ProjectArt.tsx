@@ -107,6 +107,20 @@ function ForeFlightArt({ ink }: { ink: string }) {
   )
 }
 
+function LondonArt({ ink }: { ink: string }) {
+  return (
+    <svg viewBox="0 0 400 300" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+      <rect x="185" y="140" width="30" height="140" fill={ink} opacity="0.12" stroke={ink} strokeOpacity="0.3" strokeWidth="1.5" />
+      <circle cx="200" cy="110" r="55" fill="none" stroke={ink} strokeOpacity="0.5" strokeWidth="2" />
+      <line x1="200" y1="110" x2="200" y2="75" stroke={ink} strokeOpacity="0.6" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="200" y1="110" x2="228" y2="110" stroke={ink} strokeOpacity="0.6" strokeWidth="2.5" strokeLinecap="round" />
+      <circle cx="200" cy="110" r="4" fill={ink} />
+      <circle cx="320" cy="60" r="3" fill={ink} opacity="0.4" />
+      <circle cx="80" cy="200" r="3" fill={ink} opacity="0.3" />
+    </svg>
+  )
+}
+
 const ARTS: Record<ProjectArtVariant, (props: { ink: string }) => React.JSX.Element> = {
   sensigo: SensigoArt,
   glowtap: GlowTapArt,
@@ -114,6 +128,7 @@ const ARTS: Record<ProjectArtVariant, (props: { ink: string }) => React.JSX.Elem
   trail: TrailArt,
   arus: ArusArt,
   foreflight: ForeFlightArt,
+  london: LondonArt,
 }
 
 export function ProjectArt({

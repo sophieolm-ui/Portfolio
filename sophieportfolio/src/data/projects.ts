@@ -1,4 +1,4 @@
-export type ProjectArtVariant = 'sensigo' | 'glowtap' | 'city' | 'trail' | 'arus' | 'foreflight'
+export type ProjectArtVariant = 'sensigo' | 'glowtap' | 'city' | 'trail' | 'arus' | 'foreflight' | 'london'
 
 export interface Project {
   slug: string
@@ -94,5 +94,15 @@ export const projects: Project[] = [
     artInk: 'light',
     image: '/images/projects/arus-banner.png',
     cardImagePosition: '20% center',
+  },
+  {
+    slug: 'london-study-abroad',
+    name: 'London Study Abroad',
+    year: '2026',
+    tag: 'Experiential · Conceptual design',
+    summary: 'Designing through trial and error with UW and the University of the Arts London.',
+    cardBg: '#7a2f3d',
+    art: 'london',
+    artInk: 'light',
   },
 ]

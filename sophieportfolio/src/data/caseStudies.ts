@@ -1173,4 +1173,49 @@ export const caseStudies: Record<string, CaseStudy> = {
       },
     ],
   },
+  'london-study-abroad': {
+    tagline: 'Designing through trial and error',
+    intro:
+      'During the early fall start, I participated in a study abroad in London with the University of Washington and the University of the Arts London.',
+    sections: [
+      {
+        heading: 'Program',
+        paragraphs: [
+          'This program challenged me to design user experiences in ways I hadn’t before. We focused on embodied, experiential, and conceptual design rather than digital products. A key skill I built was abductive reasoning: learning to move forward with design ideas even when the path isn’t clear, and using iteration and experimentation to discover possibilities. It was both challenging and exciting to “design through trial and error.”',
+        ],
+      },
+      {
+        heading: 'Project 1 — A cultural bridge between the DLR and the Prime Meridian',
+        facts: [
+          { label: 'Assignment', text: 'Docklands Light Railway (DLR) & the Prime Meridian' },
+          { label: 'Duration', text: 'One week' },
+          { label: 'Method', text: 'Multi-modal research, rapid ideation, making & testing' },
+        ],
+        paragraphs: [
+          'My group explored a cultural “bridge” or “tunnel” in London: a hidden connection between communities. We were assigned the Docklands Light Railway and the Prime Meridian. After researching and studying both, we used creative, multi-modal research to turn what we had experienced into something others could engage with, considering materials, users, and context throughout.',
+          'We bridged the Prime Meridian and the DLR by examining how the arbitrary points defined by the Prime Meridian are used in several modes of transport, including the DLR. After a plethora of iterations, we created three sets of directions that led participants through the building. The strict line had participants navigate based on a specific number of steps and turns. The remnants line gave participants clues from their surroundings to help them navigate. The final line gave participants only the destination, with no directions on how to get there.',
+          'Through this, we were trying to convey the sensations of navigation. Each mode of direction created a vastly different experience, and as each group interpreted the instructions, they realized there is no one specific path — similar to the Prime Meridian itself, which is an arbitrary line.',
+        ],
+      },
+      {
+        heading: 'Project 2 — Quorum sensing in Trafalgar Square',
+        facts: [
+          { label: 'Assignment', text: 'Nonhuman ways of sensing the world' },
+          { label: 'Location', text: 'Trafalgar Square' },
+          { label: 'Duration', text: 'One week' },
+        ],
+        paragraphs: [
+          'We were tasked with experiencing nonhuman ways of sensing the world through quorum sensing: the process by which cells communicate to achieve coordinated group behavior. We saw examples of this in Trafalgar Square, where street performers’ performances drew crowds. Over one week, we rapidly generated, tested, and refined ideas to create an experience where others could engage in coordinated group behavior that accomplishes something.',
+          'Our concept prompted group behavior to create harmony. We had a large group of participants line up, then handed each of them a wristband for each wrist. They were instructed to stay in the same order, form a circle, and hold hands with the people whose wristbands matched theirs — creating a knot they were instructed to untangle silently.',
+          'The knot turned out to be impossible to untangle, but participants still worked to unknot themselves and communicated silently to try. It showed that, after being prompted by a single source, a group can work together toward a larger, harmonious outcome — even one it can’t fully achieve.',
+        ],
+      },
+      {
+        heading: 'Reflection',
+        paragraphs: [
+          'I’m excited to continue bringing these lessons back to my HCDE work and future projects, especially a deeper comfort with ambiguity, collaboration, and creative exploration.',
+        ],
+      },
+    ],
+  },
 }
