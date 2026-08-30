@@ -18,6 +18,8 @@ export interface Project {
   cardImagePosition?: string
   /** Path under public/ used on the home panel and the compact grid card, but not the detail hero. Falls back to `image`. */
   cardImage?: string
+  /** If true, this project is skipped on the home page's "Selected Projects" panel, but still shows on /projects. */
+  hideFromHome?: boolean
 }
 
 // Placeholder data carried over from the existing site structure.
@@ -105,5 +107,6 @@ export const projects: Project[] = [
     art: 'london',
     artInk: 'light',
     cardImage: '/images/projects/london-cover.jpg',
+    hideFromHome: true,
   },
 ]

@@ -12,6 +12,7 @@ export function ProjectsGrid({
   variant?: 'hero' | 'simple'
 }) {
   const headingRef = useReveal<HTMLDivElement>()
+  const visibleProjects = variant === 'simple' ? projects : projects.filter((p) => !p.hideFromHome)
 
   return (
     <section id="work" className="work-section">
@@ -26,13 +27,13 @@ export function ProjectsGrid({
       {variant === 'simple' ? (
         <div className="container">
           <div className="simple-card-grid">
-            {projects.map((project) => (
+            {visibleProjects.map((project) => (
               <SimpleProjectCard key={project.slug} project={project} />
             ))}
           </div>
         </div>
       ) : (
-        projects.map((project, index) => (
+        visibleProjects.map((project, index) => (
           <ProjectCard key={project.slug} project={project} index={index} />
         ))
       )}
