@@ -5,7 +5,7 @@ export function ProjectsPage() {
   return (
     <>
       <Nav />
-      <ProjectsGrid />
+      <ProjectsGrid heading="All Projects" variant="simple" />
     </>
   )
 }

@@ -1,9 +1,16 @@
 import { projects } from '../data/projects'
 import { ProjectCard } from './ProjectCard'
+import { SimpleProjectCard } from './SimpleProjectCard'
 import { SectionLabel } from './SectionLabel'
 import { useReveal } from '../hooks/useReveal'
 
-export function ProjectsGrid() {
+export function ProjectsGrid({
+  heading = 'Selected Projects',
+  variant = 'hero',
+}: {
+  heading?: string
+  variant?: 'hero' | 'simple'
+}) {
   const headingRef = useReveal<HTMLDivElement>()
 
   return (
@@ -12,13 +19,23 @@ export function ProjectsGrid() {
         <div className="reveal" ref={headingRef}>
           <SectionLabel number="01" label="Projects" />
           <div className="section-heading">
-            <h2>Selected Projects</h2>
+            <h2>{heading}</h2>
           </div>
         </div>
       </div>
-      {projects.map((project, index) => (
-        <ProjectCard key={project.slug} project={project} index={index} />
-      ))}
+      {variant === 'simple' ? (
+        <div className="container">
+          <div className="simple-card-grid">
+            {projects.map((project) => (
+              <SimpleProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
+        </div>
+      ) : (
+        projects.map((project, index) => (
+          <ProjectCard key={project.slug} project={project} index={index} />
+        ))
+      )}
     </section>
   )
 }
