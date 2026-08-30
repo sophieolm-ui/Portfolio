@@ -18,6 +18,11 @@ export function Nav() {
             <li>
               <a href="mailto:sophie@example.com">Connect</a>
             </li>
+            <li>
+              <a href="/resume.pdf" target="_blank" rel="noreferrer">
+                Resume
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
