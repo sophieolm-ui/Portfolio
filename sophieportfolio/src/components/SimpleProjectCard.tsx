@@ -11,7 +11,7 @@ export function SimpleProjectCard({ project }: { project: Project }) {
       <div className="simple-card__media" style={{ background: project.cardBg }}>
         {project.image ? (
           <img
-            src={project.image}
+            src={project.cardImage ?? project.image}
             alt=""
             className="simple-card__img"
             style={{ objectPosition: project.cardImagePosition ?? project.imagePosition ?? 'center' }}

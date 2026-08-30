@@ -16,6 +16,8 @@ export interface Project {
   imagePosition?: string
   /** CSS object-position used only on the compact grid card (/projects). Falls back to imagePosition, then 'center'. */
   cardImagePosition?: string
+  /** Path under public/ used only on the compact grid card (/projects), for a tighter crop than `image`. Falls back to `image`. */
+  cardImage?: string
 }
 
 // Placeholder data carried over from the existing site structure.
@@ -54,6 +56,7 @@ export const projects: Project[] = [
     cardBg: '#3e7c9c',
     art: 'glowtap',
     image: '/images/projects/glowtap-cover.png',
+    cardImage: '/images/projects/glowtap-card.png',
     cardImagePosition: 'left center',
     artInk: 'light',
   },
