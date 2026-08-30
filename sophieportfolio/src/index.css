@@ -396,6 +396,20 @@ h3 {
   .project-panel {
     min-height: 70vh;
   }
+
+  .project-panel__content {
+    padding: 24px;
+    max-width: 100%;
+  }
+
+  .project-panel__lead,
+  .project-panel__trail {
+    transform: none !important;
+  }
+
+  .project-panel__name {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+  }
 }
 
 .project-panel__index {
