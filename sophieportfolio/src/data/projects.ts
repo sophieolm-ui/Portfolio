@@ -40,6 +40,7 @@ export const projects: Project[] = [
     cardBg: '#22405f',
     art: 'foreflight',
     artInk: 'light',
+    image: '/images/projects/foreflight-cover.png',
   },
   {
     slug: 'glowtap',
