@@ -53,6 +53,8 @@ export const projects: Project[] = [
     summary: 'Case study coming soon.',
     cardBg: '#3e7c9c',
     art: 'glowtap',
+    image: '/images/projects/glowtap-cover.png',
+    cardImagePosition: 'left center',
     artInk: 'light',
   },
   {
