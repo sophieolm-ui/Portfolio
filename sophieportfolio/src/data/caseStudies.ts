@@ -1176,7 +1176,7 @@ export const caseStudies: Record<string, CaseStudy> = {
   'london-study-abroad': {
     tagline: 'Designing through trial and error',
     intro:
-      'During the early fall start, I participated in a study abroad in London with the University of Washington and the University of the Arts London.',
+      'During the summer of 2025, I participated in a study abroad in London with the University of Washington and the University of the Arts London.',
     sections: [
       {
         heading: 'Program',
