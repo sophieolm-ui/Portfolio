@@ -14,6 +14,8 @@ export interface Project {
   image?: string
   /** CSS object-position for `image`, e.g. 'center bottom'. Defaults to 'center'. */
   imagePosition?: string
+  /** CSS object-position used only on the compact grid card (/projects). Falls back to imagePosition, then 'center'. */
+  cardImagePosition?: string
 }
 
 // Placeholder data carried over from the existing site structure.
@@ -41,6 +43,7 @@ export const projects: Project[] = [
     art: 'foreflight',
     artInk: 'light',
     image: '/images/projects/foreflight-cover.png',
+    cardImagePosition: '35% center',
   },
   {
     slug: 'glowtap',
@@ -83,5 +86,6 @@ export const projects: Project[] = [
     art: 'arus',
     artInk: 'light',
     image: '/images/projects/arus-banner.png',
+    cardImagePosition: '20% center',
   },
 ]

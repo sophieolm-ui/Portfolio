@@ -14,7 +14,7 @@ export function SimpleProjectCard({ project }: { project: Project }) {
             src={project.image}
             alt=""
             className="simple-card__img"
-            style={{ objectPosition: project.imagePosition ?? 'center' }}
+            style={{ objectPosition: project.cardImagePosition ?? project.imagePosition ?? 'center' }}
           />
         ) : (
           <ProjectArt variant={project.art} ink={project.artInk} />
