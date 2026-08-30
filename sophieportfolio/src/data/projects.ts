@@ -80,6 +80,8 @@ export const projects: Project[] = [
     cardBg: '#6f9a4c',
     art: 'trail',
     artInk: 'light',
+    image: '/images/projects/trailflow-cover.png',
+    cardImagePosition: '24% center',
   },
   {
     slug: 'arus',
