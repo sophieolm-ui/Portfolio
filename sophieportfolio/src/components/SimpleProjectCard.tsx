@@ -7,7 +7,12 @@ export function SimpleProjectCard({ project }: { project: Project }) {
   const revealRef = useReveal<HTMLAnchorElement>()
 
   return (
-    <Link to={`/projects/${project.slug}`} className="simple-card reveal" ref={revealRef}>
+    <Link
+      to={`/projects/${project.slug}`}
+      className="simple-card reveal"
+      ref={revealRef}
+      style={{ '--card-accent': project.cardBg } as React.CSSProperties}
+    >
       <div className="simple-card__media" style={{ background: project.cardBg }}>
         {project.cardImage ?? project.image ? (
           <img

@@ -16,7 +16,7 @@ export function Nav() {
               <a href="#about">About</a>
             </li>
             <li>
-              <a href="mailto:sophie@example.com">Connect</a>
+              <a href="mailto:sophieolm@gmail.com">Connect</a>
             </li>
             <li>
               <a href="/resume.pdf" target="_blank" rel="noreferrer">

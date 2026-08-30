@@ -483,6 +483,39 @@ h3 {
   transition: transform 0.25s ease;
 }
 
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0 8px;
+}
+
+.filter-button {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: none;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.filter-button:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.filter-button--active,
+.filter-button--active:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+}
+
 .simple-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -496,12 +529,13 @@ h3 {
   text-decoration: none;
   color: inherit;
   border: 1px solid var(--line);
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .simple-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--ink-soft);
+  transform: translateY(-6px);
+  border-color: transparent;
+  box-shadow: 0 22px 40px -14px var(--card-accent, rgba(0, 0, 0, 0.35));
 }
 
 .simple-card__media {

@@ -1,5 +1,7 @@
 export type ProjectArtVariant = 'sensigo' | 'glowtap' | 'city' | 'trail' | 'arus' | 'foreflight' | 'london'
 
+export type ProjectCategory = 'Design' | 'UX' | 'AI' | 'Research'
+
 export interface Project {
   slug: string
   name: string
@@ -20,6 +22,8 @@ export interface Project {
   cardImage?: string
   /** If true, this project is skipped on the home page's "Selected Projects" panel, but still shows on /projects. */
   hideFromHome?: boolean
+  /** Used by the filter bar on /projects. */
+  categories: ProjectCategory[]
 }
 
 // Placeholder data carried over from the existing site structure.
@@ -36,6 +40,7 @@ export const projects: Project[] = [
     artInk: 'light',
     image: '/images/projects/sensigo-cover.png',
     imagePosition: 'left bottom',
+    categories: ['Design', 'UX', 'AI'],
   },
   {
     slug: 'foreflight-social',
@@ -48,6 +53,7 @@ export const projects: Project[] = [
     artInk: 'light',
     image: '/images/projects/foreflight-cover.png',
     cardImagePosition: '35% center',
+    categories: ['UX', 'Research'],
   },
   {
     slug: 'glowtap',
@@ -61,6 +67,7 @@ export const projects: Project[] = [
     cardImage: '/images/projects/glowtap-card.png',
     cardImagePosition: 'left center',
     artInk: 'light',
+    categories: ['Design'],
   },
   {
     slug: 'city-hungarian-culture-festival',
@@ -72,6 +79,7 @@ export const projects: Project[] = [
     art: 'city',
     artInk: 'dark',
     image: '/images/projects/city-cover.png',
+    categories: ['Design'],
   },
   {
     slug: 'trail-flow',
@@ -84,6 +92,7 @@ export const projects: Project[] = [
     artInk: 'light',
     image: '/images/projects/trailflow-cover.png',
     cardImagePosition: '24% center',
+    categories: ['UX', 'Research'],
   },
   {
     slug: 'arus',
@@ -96,6 +105,7 @@ export const projects: Project[] = [
     artInk: 'light',
     image: '/images/projects/arus-banner.png',
     cardImagePosition: '20% center',
+    categories: ['Design', 'Research'],
   },
   {
     slug: 'london-study-abroad',
@@ -108,5 +118,6 @@ export const projects: Project[] = [
     artInk: 'light',
     cardImage: '/images/projects/london-cover.jpg',
     hideFromHome: true,
+    categories: ['Design', 'Research'],
   },
 ]
