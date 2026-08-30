@@ -10,7 +10,7 @@ export function Nav() {
         <nav>
           <ul className="site-nav__links">
             <li>
-              <a href="#work">Projects</a>
+              <Link to="/projects">Projects</Link>
             </li>
             <li>
               <a href="#about">About</a>
