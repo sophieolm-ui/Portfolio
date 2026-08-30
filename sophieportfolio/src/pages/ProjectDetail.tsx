@@ -27,7 +27,7 @@ export function ProjectDetail() {
     <>
       <Nav />
       <div className="container project-detail">
-        <Link to="/" className="project-detail__back">
+        <Link to="/projects" className="project-detail__back">
           ← Back to projects
         </Link>
         <div
