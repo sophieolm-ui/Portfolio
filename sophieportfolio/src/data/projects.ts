@@ -16,7 +16,7 @@ export interface Project {
   imagePosition?: string
   /** CSS object-position used only on the compact grid card (/projects). Falls back to imagePosition, then 'center'. */
   cardImagePosition?: string
-  /** Path under public/ used only on the compact grid card (/projects), for a tighter crop than `image`. Falls back to `image`. */
+  /** Path under public/ used on the home panel and the compact grid card, but not the detail hero. Falls back to `image`. */
   cardImage?: string
 }
 
