@@ -83,6 +83,5 @@ export const projects: Project[] = [
     art: 'arus',
     artInk: 'light',
     image: '/images/projects/arus-banner.png',
-    imagePosition: 'right center',
   },
 ]
