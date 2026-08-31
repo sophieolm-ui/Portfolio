@@ -15,14 +15,20 @@ export function ProjectsGrid({
   variant?: 'hero' | 'simple'
 }) {
   const headingRef = useReveal<HTMLDivElement>()
-  const [activeFilter, setActiveFilter] = useState<ProjectCategory | 'All'>('All')
+  const [activeFilters, setActiveFilters] = useState<ProjectCategory[]>([])
+
+  const toggleFilter = (category: ProjectCategory) => {
+    setActiveFilters((current) =>
+      current.includes(category) ? current.filter((c) => c !== category) : [...current, category],
+    )
+  }
 
   const homeVisible = projects.filter((p) => !p.hideFromHome)
   const visibleProjects =
     variant === 'simple'
-      ? activeFilter === 'All'
+      ? activeFilters.length === 0
         ? projects
-        : projects.filter((p) => p.categories.includes(activeFilter))
+        : projects.filter((p) => p.categories.some((c) => activeFilters.includes(c)))
       : homeVisible
 
   return (
@@ -36,12 +42,19 @@ export function ProjectsGrid({
         </div>
         {variant === 'simple' && (
           <div className="filter-bar">
-            {(['All', ...CATEGORIES] as const).map((category) => (
+            <button
+              type="button"
+              className={`filter-button${activeFilters.length === 0 ? ' filter-button--active' : ''}`}
+              onClick={() => setActiveFilters([])}
+            >
+              All
+            </button>
+            {CATEGORIES.map((category) => (
               <button
                 key={category}
                 type="button"
-                className={`filter-button${activeFilter === category ? ' filter-button--active' : ''}`}
-                onClick={() => setActiveFilter(category)}
+                className={`filter-button${activeFilters.includes(category) ? ' filter-button--active' : ''}`}
+                onClick={() => toggleFilter(category)}
               >
                 {category}
               </button>
