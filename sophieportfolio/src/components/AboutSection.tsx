@@ -9,7 +9,7 @@ export function AboutSection() {
   return (
     <section id="about" className="about-section">
       <div className="container reveal" ref={ref}>
-        <SectionLabel number="02" label="About" />
+        <SectionLabel number="01" label="About" />
         <div className="about-copy">
           <div className="about-heading-row">
             {portraitImage && <img src={portraitImage} alt="Sophie Messer" className="about-avatar" />}

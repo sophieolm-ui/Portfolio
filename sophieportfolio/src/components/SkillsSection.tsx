@@ -45,7 +45,7 @@ export function SkillsSection() {
     <section id="skills" className="skills-section">
       <div className="container">
         <div className="reveal" ref={ref}>
-          <SectionLabel number="03" label="Skills" />
+          <SectionLabel number="02" label="Skills" />
           <div className="skills-header">
             <div>
               <h2 className="skills-heading">Things I design with.</h2>
