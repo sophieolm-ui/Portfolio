@@ -19,7 +19,7 @@ export function Hero() {
         </div>
       </div>
       <div className="hero-split__content">
-        <p className="hero-split__eyebrow">Product Designer · Researcher · Manager</p>
+        <p className="hero-split__eyebrow">Product Researcher · Designer · Manager</p>
         <h1 className="hero-split__quote">
           Making technology
           <br />
