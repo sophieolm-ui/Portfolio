@@ -35,7 +35,7 @@ export function ProjectsGrid({
     <section id="work" className="work-section">
       <div className="container">
         <div className="reveal" ref={headingRef}>
-          <SectionLabel number="01" label="Projects" />
+          {variant === 'hero' && <SectionLabel number="01" label="Projects" />}
           <div className="section-heading">
             <h2>{heading}</h2>
           </div>
