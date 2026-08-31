@@ -1,6 +1,5 @@
 import { useReveal } from '../hooks/useReveal'
 import { StatCounter } from './StatCounter'
-import { SectionLabel } from './SectionLabel'
 import { portraitImage } from '../data/site'
 
 export function AboutSection() {
@@ -9,12 +8,21 @@ export function AboutSection() {
   return (
     <section id="about" className="about-section">
       <div className="container reveal" ref={ref}>
-        <SectionLabel number="01" label="About" />
-        <div className="about-copy">
-          <div className="about-heading-row">
-            {portraitImage && <img src={portraitImage} alt="Sophie Messer" className="about-avatar" />}
-            <h2>About me</h2>
+        <div className="about-hero">
+          <div className="about-hero__blob about-hero__blob--1" aria-hidden="true" />
+          <div className="about-hero__blob about-hero__blob--2" aria-hidden="true" />
+          <div className="about-hero__blob about-hero__blob--3" aria-hidden="true" />
+          {portraitImage && (
+            <span className="about-avatar-ring">
+              <img src={portraitImage} alt="Sophie Messer" />
+            </span>
+          )}
+          <div>
+            <p className="about-eyebrow">Hey, I'm</p>
+            <h1 className="about-title">Sophie Messer</h1>
           </div>
+        </div>
+        <div className="about-copy">
           <p>
             Growing up I was always very interested in technology and how it
             works. My father would spend hours explaining how different
