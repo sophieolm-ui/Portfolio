@@ -16,9 +16,11 @@ export function ContactSection() {
           </a>
         </div>
       </section>
-      <footer className="site-footer container">
-        <span>© {new Date().getFullYear()} Sophie Messer</span>
-        <a href="mailto:sophieolm@gmail.com">sophieolm@gmail.com</a>
+      <footer className="site-footer">
+        <div className="container site-footer__inner">
+          <span>© {new Date().getFullYear()} Sophie Messer</span>
+          <a href="mailto:sophieolm@gmail.com">sophieolm@gmail.com</a>
+        </div>
       </footer>
     </>
   )
