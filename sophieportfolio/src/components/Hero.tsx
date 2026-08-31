@@ -31,16 +31,9 @@ export function Hero() {
           people who need it most.
         </p>
         <div className="hero-split__actions">
-          <a
-            href="#work"
-            className="btn-pill"
-            onClick={(e) => {
-              e.preventDefault()
-              document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })
-            }}
-          >
+          <Link to="/projects" className="btn-pill">
             See my work
-          </a>
+          </Link>
           <Link to="/about" className="btn-outline">
             About me
           </Link>
