@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { RotatingWord } from './RotatingWord'
 import { PortraitPlaceholder } from './PortraitPlaceholder'
 import { useParallax } from '../hooks/useParallax'
@@ -30,12 +31,19 @@ export function Hero() {
           people who need it most.
         </p>
         <div className="hero-split__actions">
-          <a href="#work" className="btn-pill">
+          <a
+            href="#work"
+            className="btn-pill"
+            onClick={(e) => {
+              e.preventDefault()
+              document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' })
+            }}
+          >
             See my work
           </a>
-          <a href="#about" className="btn-outline">
+          <Link to="/about" className="btn-outline">
             About me
-          </a>
+          </Link>
         </div>
       </div>
     </section>

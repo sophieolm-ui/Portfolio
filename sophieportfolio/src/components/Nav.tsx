@@ -10,10 +10,10 @@ export function Nav() {
         <nav>
           <ul className="site-nav__links">
             <li>
-              <Link to="/projects">Projects</Link>
+              <Link to="/projects">All Projects</Link>
             </li>
             <li>
-              <a href="#about">About</a>
+              <Link to="/about">About Me</Link>
             </li>
             <li>
               <a href="mailto:sophieolm@gmail.com">Connect</a>
