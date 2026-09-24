@@ -60,6 +60,7 @@ export const caseStudies: Record<string, CaseStudy> = {
         paragraphs: [
           'After brainstorming project ideas, we began by sketching initial ideas for GlowTap.',
         ],
+        image: '/images/projects/glowtap/sketch.png',
       },
       {
         heading: 'Cardboard Prototype',
@@ -94,6 +95,8 @@ export const caseStudies: Record<string, CaseStudy> = {
             href: 'https://drive.google.com/file/d/15hk5kJDfVrRr-uB4XiPMgjRdqhbF_aLc/view?usp=drive_link',
           },
         ],
+        image: '/images/projects/glowtap/faucet-fit-test.png',
+        imageCaption: 'Hexagonal (left) and circular (right) prototypes attached to the faucet.',
       },
       {
         paragraphs: [
@@ -136,6 +139,8 @@ export const caseStudies: Record<string, CaseStudy> = {
             href: 'https://drive.google.com/file/d/1d-l5zs9ZSdiyy1uXKUdZoOK68W2ObmHC/view?usp=drive_link',
           },
         ],
+        image: '/images/projects/glowtap/laser-cut-shapes.png',
+        imageCaption: 'Seven laser-cut light shapes and the colored-tape testing materials.',
       },
       {
         paragraphs: [
@@ -167,6 +172,8 @@ export const caseStudies: Record<string, CaseStudy> = {
             'While the sizing was close, the prints easily slipped off due to their smooth interior surface.',
           ],
         },
+        image: '/images/projects/glowtap/3d-print-v1.png',
+        imageCaption: 'CAD model and our first three 3D-printed prototypes.',
       },
       {
         paragraphs: [
@@ -191,6 +198,8 @@ export const caseStudies: Record<string, CaseStudy> = {
         paragraphs: [
           'Conclusion: The "dot" texture was more effective in adding grip to the interior of the prototype, so we chose this texture for our final 3D printed design. Our final 3D printed prototype included the "dot" texture and an inner chamber to contain the LED lights behind the smiley faces.',
         ],
+        image: '/images/projects/glowtap/3d-print-final.png',
+        imageCaption: 'Our final 3D-printed prototype, with the "dot" texture and smiley-face light chamber.',
       },
       {
         heading: 'Circuit and Wizard of Oz Prototype',
@@ -226,6 +235,8 @@ export const caseStudies: Record<string, CaseStudy> = {
             href: 'https://www.youtube.com/watch?v=iXmDhTgOyG8',
           },
         ],
+        image: '/images/projects/glowtap/wizard-of-oz.png',
+        imageCaption: 'Green (safe), yellow (turn off soon), and red (turn off now) light cues during testing.',
       },
       {
         heading: 'User Testing Session 3 — Evaluating Usability Through Wizard of Oz Prototyping',
