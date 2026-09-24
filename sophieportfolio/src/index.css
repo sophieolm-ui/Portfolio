@@ -1088,6 +1088,77 @@ h3 {
   text-align: center;
 }
 
+/* ForeFlight Social — themed to match the original case-study site's navy/lavender look */
+
+.case-study--foreflight {
+  --ff-navy: #0b1335;
+  --ff-lavender: #e6e9f0;
+}
+
+.case-study--foreflight .case-study__section h2 {
+  background: var(--ff-navy);
+  color: #fff;
+  text-align: center;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  display: inline-block;
+  margin: 0 auto 20px;
+  max-width: 100%;
+}
+
+.case-study--foreflight .case-study__section {
+  text-align: center;
+}
+
+.case-study--foreflight .case-study__section p,
+.case-study--foreflight .case-study__facts,
+.case-study--foreflight .case-study__insights,
+.case-study--foreflight .case-study__figure,
+.case-study--foreflight .case-study__links {
+  text-align: left;
+}
+
+.case-study--foreflight .case-study__facts {
+  background: var(--ff-lavender);
+  border: none;
+  border-radius: 18px;
+}
+
+.case-study--foreflight .case-study__fact dt {
+  color: var(--ff-navy);
+}
+
+.case-study--foreflight .case-study__insights {
+  background: var(--ff-lavender);
+  border-left: none;
+  border-radius: 18px;
+  padding: 20px 24px;
+}
+
+.case-study--foreflight .case-study__insights li::before {
+  background: var(--ff-navy);
+}
+
+.case-study--foreflight .case-study__links a {
+  background: var(--ff-navy);
+  color: #fff;
+  border-color: var(--ff-navy);
+  border-radius: 999px;
+  padding: 10px 18px;
+}
+
+.case-study--foreflight .case-study__links a:hover {
+  color: #fff;
+  opacity: 0.85;
+}
+
+.case-study--foreflight .case-study__figure img {
+  border-radius: 18px;
+  border-color: var(--ff-lavender);
+}
+
 .case-study__table-wrap {
   overflow-x: auto;
   margin: 0 0 20px;

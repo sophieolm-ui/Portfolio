@@ -49,7 +49,7 @@ export function ProjectDetail() {
         <h1>{project.name}</h1>
 
         {caseStudy ? (
-          <div className="case-study">
+          <div className={`case-study${project.slug === 'foreflight-social' ? ' case-study--foreflight' : ''}`}>
             <p className="case-study__tagline">{caseStudy.tagline}</p>
             <p className="case-study__intro">{caseStudy.intro}</p>
 
