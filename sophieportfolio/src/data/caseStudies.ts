@@ -1128,6 +1128,9 @@ export const caseStudies: Record<string, CaseStudy> = {
           { label: 'Duration', text: '6 months' },
           { label: 'Program', text: 'University of Washington HCDE Capstone' },
         ],
+        links: [
+          { label: 'Full case study & research deck', href: 'https://foreflightsocial.framer.website/' },
+        ],
       },
       {
         heading: 'The Opportunity',
