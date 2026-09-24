@@ -3,6 +3,7 @@ import { Nav } from '../components/Nav'
 import { ProjectArt } from '../components/ProjectArt'
 import { projects } from '../data/projects'
 import { caseStudies } from '../data/caseStudies'
+import { getVideoThumbnail } from '../utils/video'
 
 export function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>()
@@ -49,7 +50,15 @@ export function ProjectDetail() {
         <h1>{project.name}</h1>
 
         {caseStudy ? (
-          <div className={`case-study${project.slug === 'foreflight-social' ? ' case-study--foreflight' : ''}`}>
+          <div
+            className={`case-study${
+              project.slug === 'foreflight-social'
+                ? ' case-study--foreflight'
+                : project.slug === 'glowtap'
+                  ? ' case-study--glowtap'
+                  : ''
+            }`}
+          >
             <p className="case-study__tagline">{caseStudy.tagline}</p>
             <p className="case-study__intro">{caseStudy.intro}</p>
 
@@ -150,15 +159,47 @@ export function ProjectDetail() {
                 )}
 
                 {section.links && (
-                  <ul className="case-study__links">
-                    {section.links.map((link) => (
-                      <li key={link.href}>
-                        <a href={link.href} target="_blank" rel="noreferrer">
-                          {link.label} ↗
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+                  <>
+                    {section.links.filter((l) => getVideoThumbnail(l.href)).length > 0 && (
+                      <div className="case-study__videos">
+                        {section.links
+                          .filter((link) => getVideoThumbnail(link.href))
+                          .map((link) => (
+                            <a
+                              key={link.href}
+                              href={link.href}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="case-study__video-card"
+                            >
+                              <img
+                                src={getVideoThumbnail(link.href) ?? ''}
+                                alt=""
+                                loading="lazy"
+                                onError={(e) => {
+                                  e.currentTarget.style.display = 'none'
+                                }}
+                              />
+                              <span className="case-study__video-play" aria-hidden="true" />
+                              <span className="case-study__video-label">{link.label}</span>
+                            </a>
+                          ))}
+                      </div>
+                    )}
+                    {section.links.filter((l) => !getVideoThumbnail(l.href)).length > 0 && (
+                      <ul className="case-study__links">
+                        {section.links
+                          .filter((link) => !getVideoThumbnail(link.href))
+                          .map((link) => (
+                            <li key={link.href}>
+                              <a href={link.href} target="_blank" rel="noreferrer">
+                                {link.label} ↗
+                              </a>
+                            </li>
+                          ))}
+                      </ul>
+                    )}
+                  </>
                 )}
 
                 {section.image && (
