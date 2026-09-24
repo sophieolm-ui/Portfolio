@@ -1052,6 +1052,25 @@ h3 {
   border-color: var(--ink);
 }
 
+.case-study__figure {
+  margin: 24px 0 0;
+}
+
+.case-study__figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+}
+
+.case-study__figure figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
 .case-study__table-wrap {
   overflow-x: auto;
   margin: 0 0 20px;

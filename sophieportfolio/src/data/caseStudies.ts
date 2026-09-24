@@ -31,6 +31,10 @@ export interface CaseStudySection {
   table?: CaseStudyTable
   cards?: CaseStudyCard[]
   palette?: CaseStudyPaletteGroup[]
+  /** Path under public/, shown full-width below the section's other content. */
+  image?: string
+  imageAlt?: string
+  imageCaption?: string
 }
 
 export interface CaseStudy {
@@ -1049,6 +1053,10 @@ export const caseStudies: Record<string, CaseStudy> = {
             'Designing for constrained, real-world environments',
           ],
         },
+        image: '/images/projects/sensigo-detail-photo.png',
+      },
+      {
+        image: '/images/projects/sensigo-ia-diagram.webp',
       },
     ],
   },

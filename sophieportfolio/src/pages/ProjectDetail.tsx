@@ -160,6 +160,13 @@ export function ProjectDetail() {
                     ))}
                   </ul>
                 )}
+
+                {section.image && (
+                  <figure className="case-study__figure">
+                    <img src={section.image} alt={section.imageAlt ?? ''} />
+                    {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
+                  </figure>
+                )}
               </div>
             ))}
           </div>
