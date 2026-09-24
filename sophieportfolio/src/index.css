@@ -965,6 +965,7 @@ h3 {
   border-radius: var(--radius-md);
   padding: 20px 24px;
   margin: 0 0 20px;
+  max-width: 640px;
 }
 
 .case-study__fact {
@@ -1000,6 +1001,7 @@ h3 {
   border-left: 2px solid var(--line);
   padding-left: 20px;
   margin: 0 0 20px;
+  max-width: 72ch;
 }
 
 .case-study__insights-title {
@@ -1021,9 +1023,22 @@ h3 {
 }
 
 .case-study__insights li {
+  position: relative;
+  padding-left: 18px;
   color: var(--ink-soft);
   font-size: 0.92rem;
   line-height: 1.6;
+}
+
+.case-study__insights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ink-soft);
 }
 
 .case-study__links {
