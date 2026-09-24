@@ -918,7 +918,6 @@ h3 {
 
 .case-study {
   margin-top: 28px;
-  max-width: 72ch;
 }
 
 .case-study__tagline {
@@ -926,12 +925,14 @@ h3 {
   color: var(--ink-soft);
   font-size: 1.1rem;
   margin: 0 0 12px;
+  max-width: 72ch;
 }
 
 .case-study__intro {
   font-size: 1.15rem;
   line-height: 1.6;
   margin: 0 0 56px;
+  max-width: 72ch;
 }
 
 .case-study__section {
@@ -949,6 +950,7 @@ h3 {
   color: var(--ink-soft);
   line-height: 1.7;
   margin: 0 0 16px;
+  max-width: 72ch;
 }
 
 .case-study__section p:last-child {
