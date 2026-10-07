@@ -27,25 +27,24 @@ export function ProjectDetail() {
   return (
     <>
       <Nav />
-      <div className="container project-detail">
+      <div className="container project-detail__back-wrap">
         <Link to="/projects" className="project-detail__back">
           ← Back to projects
         </Link>
-        <div
-          className="project-detail__hero"
-          style={{ background: project.cardBg }}
-        >
-          {project.image ? (
-            <img
-              src={project.image}
-              alt=""
-              className="project-detail__img"
-              style={{ objectPosition: project.imagePosition ?? 'center' }}
-            />
-          ) : (
-            <ProjectArt variant={project.art} ink={project.artInk} />
-          )}
-        </div>
+      </div>
+      <div className="project-detail__hero" style={{ background: project.cardBg }}>
+        {project.image ? (
+          <img
+            src={project.image}
+            alt=""
+            className="project-detail__img"
+            style={{ objectPosition: project.imagePosition ?? 'center' }}
+          />
+        ) : (
+          <ProjectArt variant={project.art} ink={project.artInk} />
+        )}
+      </div>
+      <div className="container project-detail">
         <p className="project-detail__eyebrow">{project.tag}</p>
         <h1>{project.name}</h1>
 
