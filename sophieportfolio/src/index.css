@@ -211,6 +211,23 @@ h3 {
   transform: scaleX(1);
 }
 
+@media (max-width: 640px) {
+  .site-nav__inner {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .site-nav__logo {
+    white-space: nowrap;
+  }
+
+  .site-nav__links {
+    width: 100%;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+
 .btn-pill {
   background: transparent;
   color: var(--ink);
@@ -1174,20 +1191,8 @@ h3 {
   font-size: 1.05rem;
   font-weight: 600;
   display: inline-block;
-  margin: 0 auto 20px;
+  margin: 0 0 20px;
   max-width: 100%;
-}
-
-.case-study--foreflight .case-study__section {
-  text-align: center;
-}
-
-.case-study--foreflight .case-study__section p,
-.case-study--foreflight .case-study__facts,
-.case-study--foreflight .case-study__insights,
-.case-study--foreflight .case-study__figure,
-.case-study--foreflight .case-study__links {
-  text-align: left;
 }
 
 .case-study--foreflight .case-study__facts {
