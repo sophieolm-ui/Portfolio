@@ -35,11 +35,11 @@ export const projects: Project[] = [
     year: '2025',
     tag: 'Mobile · Product design',
     summary: 'Case study coming soon.',
-    cardBg: '#1b2d3b',
+    cardBg: '#2b2138',
     art: 'sensigo',
     artInk: 'light',
     image: '/images/projects/sensigo-cover.png',
-    cardImagePosition: '8% center',
+    imagePosition: 'left bottom',
     categories: ['Design', 'UX', 'AI'],
   },
   {
