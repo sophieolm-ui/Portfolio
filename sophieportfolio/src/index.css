@@ -904,9 +904,7 @@ h3 {
 }
 
 .project-detail__hero {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  width: 100%;
   aspect-ratio: 16 / 7.5;
   max-height: 70vh;
   margin-bottom: 40px;
