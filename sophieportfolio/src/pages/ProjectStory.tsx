@@ -49,7 +49,7 @@ export function ProjectStory() {
 
         <div
           className="project-story"
-          style={{ '--case-accent': project.cardBg } as React.CSSProperties}
+          style={{ '--case-accent': story.accent ?? project.cardBg } as React.CSSProperties}
         >
           <p className="project-story__tagline">{story.tagline}</p>
           <p className="project-story__intro">{story.intro}</p>

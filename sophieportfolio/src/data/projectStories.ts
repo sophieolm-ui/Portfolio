@@ -19,6 +19,9 @@ export interface ProjectStory {
   stats: ProjectStoryStat[]
   sections: ProjectStorySection[]
   palette?: ProjectStoryPaletteColor[]
+  /** Overrides the project's card color as the accent for stats/CTA, when the
+   * case study has its own established brand color (e.g. GlowTap's mauve). */
+  accent?: string
 }
 
 // Short, narrative version of a case study, for projects whose full write-up
@@ -66,6 +69,55 @@ export const projectStories: Record<string, ProjectStory> = {
       { name: 'Green', hex: '146A4F' },
       { name: 'Yellow', hex: 'FCCC5D' },
       { name: 'Blue', hex: '416098' },
+    ],
+  },
+
+  glowtap: {
+    tagline: '"See your water, save your water"',
+    accent: '#8c6e86',
+    intro:
+      'GlowTap is a faucet attachment that glows green, yellow, or red to cue people to turn off the water sooner — a hands-on exploration of behavior change through physical prototyping, built across four iterations and three rounds of user testing.',
+    stats: [
+      { value: '4', label: 'Prototype iterations' },
+      { value: '3', label: 'User testing rounds' },
+      { value: '30+', label: 'Showcase viewers' },
+    ],
+    sections: [
+      {
+        heading: 'The concept',
+        paragraphs: [
+          'Inspired by UN SDG 6 (Clean Water and Sanitation), GlowTap clips onto a bathroom faucet and uses smiley-face light cues — green for safe, yellow for a warning, red for turn it off now — to nudge people toward shorter handwashing and face-washing habits, without lecturing them about it.',
+        ],
+      },
+      {
+        heading: 'Shape, then signal',
+        paragraphs: [
+          'Cardboard mockups settled the physical question first: a circular form beat a hexagonal one for comfort and how "unified" it looked with the sink. Laser-cut light shapes settled the signal — testers read smiley faces faster and more reliably than plus/minus icons or hand symbols, and one tester flagged that the faces also worked better for colorblindness.',
+        ],
+      },
+      {
+        heading: 'Solving the fit',
+        paragraphs: [
+          'Early 3D-printed shells kept slipping off the faucet. The fix wasn’t a tighter diameter — it was texture: a "dot" grip pattern held firm even with water running, while a "diagonal" pattern tested the same week slid right off.',
+        ],
+      },
+      {
+        heading: 'Wizard of Oz, real reactions',
+        paragraphs: [
+          'For the highest-fidelity test, a teammate hid under the sink manually triggering the lights through a soldered circuit while a participant washed their hands with no prior explanation. They stopped the water the moment it turned red — unprompted — and called the colors "something we grew up accustomed to."',
+        ],
+      },
+      {
+        heading: 'Showcase',
+        paragraphs: [
+          'The final demo went in front of 30+ students, two design professors, and visiting professionals. The read-back: the solution felt intuitive and non-obtrusive, and the branding itself made people want one — alongside open questions about sensing real flow rate and designing for low-vision users.',
+        ],
+      },
+    ],
+    palette: [
+      { name: 'Green', hex: '4f8a3a' },
+      { name: 'Yellow', hex: 'f0c33a' },
+      { name: 'Red', hex: 'c0392b' },
     ],
   },
 }
