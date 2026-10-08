@@ -14,6 +14,8 @@ const positions = [
   { top: '78%', left: '44%' }, { top: '66%', left: '66%' }, { top: '84%', left: '26%' },
   { top: '18%', left: '30%' }, { top: '60%', left: '16%' }, { top: '24%', left: '3%' },
   { top: '86%', left: '2%' },
+  { top: '14%', left: '58%' }, { top: '46%', left: '62%' }, { top: '70%', left: '56%' },
+  { top: '94%', left: '14%' },
 ]
 
 function PlaygroundChip({ skill, position }: { skill: (typeof allSkills)[number]; position: { top: string; left: string } }) {

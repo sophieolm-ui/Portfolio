@@ -53,4 +53,14 @@ export const skillCategories: SkillCategory[] = [
       { name: 'GitHub', tag: 'Handoff', description: 'Design-to-dev collaboration', color: '#f5f4f2', short: 'Gh' },
     ],
   },
+  {
+    id: 'behavior-science',
+    label: 'Behavior Science',
+    skills: [
+      { name: 'Behavioral Design', tag: 'Psychology', description: 'Applying behavioral principles to interface decisions', color: '#9b5de5', short: 'BD' },
+      { name: 'Cognitive Psychology', tag: 'Psychology', description: 'Mental models, heuristics & biases', color: '#f15bb5', short: 'Cg' },
+      { name: 'Nudge Theory', tag: 'Psychology', description: 'Choice architecture & defaults', color: '#00bbf9', short: 'Nd' },
+      { name: 'Habit Formation', tag: 'Psychology', description: 'Hooks, loops & behavior change', color: '#00c49a', short: 'Hb' },
+    ],
+  },
 ]
