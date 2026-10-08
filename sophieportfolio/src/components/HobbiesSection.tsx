@@ -25,6 +25,7 @@ export function HobbiesSection() {
                 style={{ background: hobby.color, '--card-accent': hobby.color } as React.CSSProperties}
               >
                 {hobby.image && <img src={hobby.image} alt={hobby.name} />}
+                <span className="hobby-card__tag">{hobby.category}</span>
               </div>
             ))}
           </div>
