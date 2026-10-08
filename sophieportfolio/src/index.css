@@ -755,6 +755,23 @@ h3 {
   margin: 10px 0 28px;
 }
 
+.hobby-category {
+  margin-top: 36px;
+}
+
+.hobby-category:first-of-type {
+  margin-top: 28px;
+}
+
+.hobby-category__title {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+}
+
 .hobbies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
