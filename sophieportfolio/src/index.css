@@ -159,7 +159,8 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .site-nav__logo {
