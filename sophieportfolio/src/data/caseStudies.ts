@@ -1096,6 +1096,8 @@ export const caseStudies: Record<string, CaseStudy> = {
         paragraphs: [
           'Our team, Green Frontier, consisted of myself, Andrew Bernhardt Nugroho, Peter Kastner, Omkar Shirke, and Catherine Huang. We each brought diverse backgrounds in energy systems, renewables, chemical engineering, and behavioral design, and worked across several time zones to create a design that was both meaningful and impactful.',
         ],
+        image: '/images/projects/arus/team-call.jpg',
+        imageCaption: 'Team Green Frontier — Sophie Messer, Peter Kastner, Yu-Ching Huang, Omkar Shirke, and Andrew Bernhardt Nugroho.',
       },
       {
         heading: 'The Problem',
@@ -1120,6 +1122,10 @@ export const caseStudies: Record<string, CaseStudy> = {
         paragraphs: [
           'If we continue to work on this project, my next step would be to conduct interviews with the Indonesian fishing communities to validate our assumptions and better understand their needs.',
         ],
+      },
+      {
+        image: '/images/projects/arus/certificate.png',
+        imageCaption: 'Certificate of completion, Global Challenge Lab 2026 — Imperial Enterprise Lab.',
       },
     ],
   },
