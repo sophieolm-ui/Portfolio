@@ -6,6 +6,9 @@ export interface ProjectStoryStat {
 export interface ProjectStorySection {
   heading?: string
   paragraphs: string[]
+  image?: string
+  imageAlt?: string
+  imageCaption?: string
 }
 
 export interface ProjectStoryPaletteColor {
@@ -94,18 +97,24 @@ export const projectStories: Record<string, ProjectStory> = {
         paragraphs: [
           'Cardboard mockups settled the physical question first: a circular form beat a hexagonal one for comfort and how "unified" it looked with the sink. Laser-cut light shapes settled the signal — testers read smiley faces faster and more reliably than plus/minus icons or hand symbols, and one tester flagged that the faces also worked better for colorblindness.',
         ],
+        image: '/images/projects/glowtap/laser-cut-shapes.png',
+        imageCaption: 'Seven laser-cut light shapes tested for clarity and tone.',
       },
       {
         heading: 'Solving the fit',
         paragraphs: [
           'Early 3D-printed shells kept slipping off the faucet. The fix wasn’t a tighter diameter — it was texture: a "dot" grip pattern held firm even with water running, while a "diagonal" pattern tested the same week slid right off.',
         ],
+        image: '/images/projects/glowtap/3d-print-final.png',
+        imageCaption: 'The final 3D-printed shell, with its "dot" grip texture and light chamber.',
       },
       {
         heading: 'Wizard of Oz, real reactions',
         paragraphs: [
           'For the highest-fidelity test, a teammate hid under the sink manually triggering the lights through a soldered circuit while a participant washed their hands with no prior explanation. They stopped the water the moment it turned red — unprompted — and called the colors "something we grew up accustomed to."',
         ],
+        image: '/images/projects/glowtap/wizard-of-oz.png',
+        imageCaption: 'Green, yellow, and red light cues during the Wizard of Oz test.',
       },
       {
         heading: 'Showcase',

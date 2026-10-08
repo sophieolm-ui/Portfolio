@@ -71,6 +71,12 @@ export function ProjectStory() {
               {section.paragraphs.map((paragraph, j) => (
                 <p key={j}>{paragraph}</p>
               ))}
+              {section.image && (
+                <figure className="project-story__figure">
+                  <img src={section.image} alt={section.imageAlt ?? ''} />
+                  {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
+                </figure>
+              )}
             </div>
           ))}
 
