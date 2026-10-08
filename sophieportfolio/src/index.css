@@ -940,6 +940,7 @@ h3 {
 
 .case-study {
   margin-top: 28px;
+  --case-accent: var(--ink);
 }
 
 .case-study__tagline {
@@ -962,10 +963,23 @@ h3 {
 }
 
 .case-study__section h2 {
+  position: relative;
   font-size: clamp(1.4rem, 3vw, 1.8rem);
   font-weight: 600;
   letter-spacing: -0.01em;
-  margin: 0 0 18px;
+  margin: 0 0 22px;
+  padding-bottom: 14px;
+}
+
+.case-study__section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--case-accent);
 }
 
 .case-study__section p {
@@ -983,6 +997,7 @@ h3 {
   display: grid;
   gap: 14px;
   border: 1px solid var(--line);
+  border-left: 4px solid var(--case-accent);
   background: var(--accent-soft);
   border-radius: var(--radius-md);
   padding: 20px 24px;
@@ -1026,6 +1041,54 @@ h3 {
   max-width: 72ch;
 }
 
+.case-study__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px;
+  margin: 4px 0 24px;
+  max-width: 640px;
+}
+
+.case-study__stat {
+  padding: 22px 20px;
+  border-radius: var(--radius-md);
+  background: var(--case-accent);
+  color: var(--case-accent-ink, #fff);
+}
+
+.case-study__stat:nth-child(2) {
+  background: color-mix(in srgb, var(--case-accent) 55%, white);
+  color: var(--ink);
+}
+
+.case-study__stat:nth-child(3) {
+  background: color-mix(in srgb, var(--case-accent) 30%, white);
+  color: var(--ink);
+}
+
+.case-study__stat:nth-child(n + 4) {
+  background: color-mix(in srgb, var(--case-accent) 15%, var(--accent-soft));
+  color: var(--ink);
+}
+
+.case-study__stat-value {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.case-study__stat-label {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.85;
+}
+
 .case-study__insights-title {
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -1060,7 +1123,7 @@ h3 {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--ink-soft);
+  background: var(--case-accent);
 }
 
 .case-study__links {
@@ -1200,6 +1263,10 @@ h3 {
   max-width: 100%;
 }
 
+.case-study--foreflight .case-study__section h2::after {
+  display: none;
+}
+
 .case-study--foreflight .case-study__facts {
   background: var(--ff-lavender);
   border: none;
@@ -1248,6 +1315,10 @@ h3 {
 
 .case-study--glowtap .case-study__section h2 {
   color: var(--gt-heading);
+}
+
+.case-study--glowtap .case-study__section h2::after {
+  background: var(--gt-heading);
 }
 
 .case-study--glowtap .case-study__facts {

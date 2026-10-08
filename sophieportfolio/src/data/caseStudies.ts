@@ -19,10 +19,17 @@ export interface CaseStudyPaletteGroup {
   colors: { name: string; hex: string }[]
 }
 
+export interface CaseStudyStat {
+  value: string
+  label: string
+}
+
 export interface CaseStudySection {
   heading?: string
   paragraphs?: string[]
   facts?: CaseStudyFact[]
+  /** Big bold number callouts, e.g. { value: '26', label: 'Survey responses' }. */
+  stats?: CaseStudyStat[]
   insights?: {
     title?: string
     items: string[]
@@ -1143,6 +1150,10 @@ export const caseStudies: Record<string, CaseStudy> = {
         paragraphs: [
           'After extensive research and a survey of 26 general aviation (GA) pilots who use ForeFlight, we conducted 9 interviews. This process was extremely eye-opening.',
         ],
+        stats: [
+          { value: '26', label: 'Survey responses' },
+          { value: '9', label: 'Interviews' },
+        ],
         insights: {
           title: 'Findings',
           items: [
@@ -1156,6 +1167,11 @@ export const caseStudies: Record<string, CaseStudy> = {
         heading: 'Ideation & Prototyping',
         paragraphs: [
           'To design a usable, helpful prototype, we created an ideation matrix with 25+ unique ideas, conducted 5 concept and usability tests, and ran 3 rounds of prototyping.',
+        ],
+        stats: [
+          { value: '25+', label: 'Unique ideas' },
+          { value: '5', label: 'Concept & usability tests' },
+          { value: '3', label: 'Rounds of prototyping' },
         ],
       },
       {

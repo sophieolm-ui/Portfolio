@@ -57,6 +57,12 @@ export function ProjectDetail() {
                   ? ' case-study--glowtap'
                   : ''
             }`}
+            style={
+              {
+                '--case-accent': project.cardBg,
+                '--case-accent-ink': project.artInk === 'light' ? '#fff' : '#1c1418',
+              } as React.CSSProperties
+            }
           >
             <p className="case-study__tagline">{caseStudy.tagline}</p>
             <p className="case-study__intro">{caseStudy.intro}</p>
@@ -77,6 +83,17 @@ export function ProjectDetail() {
                 )}
 
                 {section.paragraphs?.map((paragraph, j) => <p key={j}>{paragraph}</p>)}
+
+                {section.stats && (
+                  <div className="case-study__stats">
+                    {section.stats.map((stat) => (
+                      <div className="case-study__stat" key={stat.label}>
+                        <span className="case-study__stat-value">{stat.value}</span>
+                        <span className="case-study__stat-label">{stat.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
 
                 {section.table && (
                   <div className="case-study__table-wrap">
