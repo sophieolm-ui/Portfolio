@@ -1119,6 +1119,36 @@ h3 {
   max-width: 640px;
 }
 
+.case-study__intro-row {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  margin: 0 0 20px;
+}
+
+.case-study__intro-row .case-study__facts {
+  flex: 1 1 380px;
+  margin: 0;
+}
+
+.case-study__intro-image {
+  flex: 1 1 320px;
+  max-width: 420px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+@media (max-width: 760px) {
+  .case-study__intro-row {
+    flex-direction: column;
+  }
+
+  .case-study__intro-image {
+    max-width: 100%;
+    max-height: 280px;
+  }
+}
+
 .case-study__fact {
   display: grid;
   grid-template-columns: 160px 1fr;

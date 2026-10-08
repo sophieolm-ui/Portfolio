@@ -74,19 +74,35 @@ export function ProjectDetail() {
             <p className="case-study__tagline">{caseStudy.tagline}</p>
             <p className="case-study__intro">{caseStudy.intro}</p>
 
-            {caseStudy.sections.map((section, i) => (
+            {caseStudy.sections.map((section, i) => {
+              const isIntroCard = i === 0 && !section.heading && !!section.facts && !section.paragraphs
+              const factsList = section.facts && (
+                <dl className="case-study__facts">
+                  {section.facts.map((fact) => (
+                    <div className="case-study__fact" key={fact.label}>
+                      <dt>{fact.label}</dt>
+                      <dd>{fact.text}</dd>
+                    </div>
+                  ))}
+                </dl>
+              )
+
+              return (
               <div className="case-study__section" key={i}>
                 {section.heading && <h2>{section.heading}</h2>}
 
-                {section.facts && (
-                  <dl className="case-study__facts">
-                    {section.facts.map((fact) => (
-                      <div className="case-study__fact" key={fact.label}>
-                        <dt>{fact.label}</dt>
-                        <dd>{fact.text}</dd>
-                      </div>
-                    ))}
-                  </dl>
+                {section.facts && isIntroCard && project.image ? (
+                  <div className="case-study__intro-row">
+                    {factsList}
+                    <img
+                      className="case-study__intro-image"
+                      src={project.image}
+                      alt=""
+                      style={{ objectPosition: project.imagePosition ?? 'center' }}
+                    />
+                  </div>
+                ) : (
+                  factsList
                 )}
 
                 {section.paragraphs?.map((paragraph, j) => <p key={j}>{paragraph}</p>)}
@@ -232,7 +248,8 @@ export function ProjectDetail() {
                   </figure>
                 )}
               </div>
-            ))}
+              )
+            })}
           </div>
         ) : (
           <div className="project-detail__placeholder">{project.summary}</div>
