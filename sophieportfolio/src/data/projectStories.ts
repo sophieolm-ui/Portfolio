@@ -119,7 +119,7 @@ export const projectStories: Record<string, ProjectStory> = {
       {
         heading: 'Showcase',
         paragraphs: [
-          'The final demo went in front of 30+ students, two design professors, and visiting professionals. The read-back: the solution felt intuitive and non-obtrusive, and the branding itself made people want one — alongside open questions about sensing real flow rate and designing for low-vision users.',
+          'The final demo went in front of 30+ students, two design professors, and visiting professionals. The feedback: the solution felt intuitive and non-obtrusive, and the branding itself made people want one — alongside open questions about sensing real flow rate and designing for low-vision users.',
         ],
       },
     ],
