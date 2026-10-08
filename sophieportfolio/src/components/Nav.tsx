@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export function Nav() {
   return (
     <header className="site-nav">
-      <div className="container site-nav__inner">
+      <div className="site-nav__inner">
         <Link to="/" className="site-nav__logo">
           Sophie Messer
         </Link>
