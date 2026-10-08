@@ -1464,13 +1464,13 @@ h3 {
 
 .project-story {
   margin-top: 28px;
-  max-width: 68ch;
 }
 
 .project-story__tagline {
   font-size: 1.15rem;
   color: var(--ink-soft);
   margin: 0 0 8px;
+  max-width: 70ch;
 }
 
 .project-story__intro {
@@ -1479,6 +1479,7 @@ h3 {
   font-weight: 450;
   letter-spacing: -0.01em;
   margin: 0 0 36px;
+  max-width: 70ch;
 }
 
 .project-story__stats {
@@ -1526,14 +1527,32 @@ h3 {
   margin: 0 0 14px;
   line-height: 1.65;
   color: var(--ink-soft);
+  max-width: 70ch;
 }
 
 .project-story__section p:last-child {
   margin-bottom: 0;
 }
 
+.project-story__section--with-image {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.project-story__section--with-image .project-story__section-text {
+  flex: 1 1 380px;
+  min-width: 0;
+}
+
 .project-story__figure {
   margin: 20px 0 0;
+  flex: 1 1 320px;
+  max-width: 420px;
+}
+
+.project-story__section--with-image .project-story__figure {
+  margin-top: 0;
 }
 
 .project-story__figure img {
@@ -1548,6 +1567,17 @@ h3 {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   color: var(--ink-soft);
+}
+
+@media (max-width: 760px) {
+  .project-story__section--with-image {
+    flex-direction: column;
+  }
+
+  .project-story__section--with-image .project-story__figure {
+    margin-top: 20px;
+    max-width: 420px;
+  }
 }
 
 .project-story__palette {

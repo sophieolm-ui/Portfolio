@@ -66,11 +66,13 @@ export function ProjectStory() {
           )}
 
           {story.sections.map((section, i) => (
-            <div className="project-story__section" key={i}>
-              {section.heading && <h2>{section.heading}</h2>}
-              {section.paragraphs.map((paragraph, j) => (
-                <p key={j}>{paragraph}</p>
-              ))}
+            <div className={`project-story__section${section.image ? ' project-story__section--with-image' : ''}`} key={i}>
+              <div className="project-story__section-text">
+                {section.heading && <h2>{section.heading}</h2>}
+                {section.paragraphs.map((paragraph, j) => (
+                  <p key={j}>{paragraph}</p>
+                ))}
+              </div>
               {section.image && (
                 <figure className="project-story__figure">
                   <img src={section.image} alt={section.imageAlt ?? ''} />
