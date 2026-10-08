@@ -897,7 +897,7 @@ h3 {
 /* Project detail page */
 
 .project-detail {
-  padding: 0 0 100px;
+  padding-bottom: 100px;
 }
 
 .project-detail__back-wrap {
