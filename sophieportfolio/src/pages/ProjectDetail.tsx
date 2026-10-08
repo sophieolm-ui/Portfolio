@@ -3,12 +3,14 @@ import { Nav } from '../components/Nav'
 import { ProjectArt } from '../components/ProjectArt'
 import { projects } from '../data/projects'
 import { caseStudies } from '../data/caseStudies'
+import { projectStories } from '../data/projectStories'
 import { getVideoThumbnail } from '../utils/video'
 
 export function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>()
   const project = projects.find((p) => p.slug === slug)
   const caseStudy = slug ? caseStudies[slug] : undefined
+  const hasStory = Boolean(slug && projectStories[slug])
 
   if (!project) {
     return (
@@ -31,6 +33,11 @@ export function ProjectDetail() {
         <Link to="/projects" className="project-detail__back">
           ← Back to projects
         </Link>
+        {hasStory && (
+          <Link to={`/projects/${slug}`} className="project-detail__back">
+            ← Story version
+          </Link>
+        )}
       </div>
       <div className="project-detail__hero" style={{ background: project.cardBg }}>
         {project.image ? (

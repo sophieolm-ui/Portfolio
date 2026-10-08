@@ -994,6 +994,10 @@ h3 {
 
 .project-detail__back-wrap {
   padding-top: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
 }
 
 .project-detail__back {
@@ -1454,6 +1458,117 @@ h3 {
 
 .case-study--glowtap .case-study__figure img {
   border-color: var(--gt-peach);
+}
+
+/* Short-story project page */
+
+.project-story {
+  margin-top: 28px;
+  max-width: 68ch;
+}
+
+.project-story__tagline {
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+}
+
+.project-story__intro {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  font-weight: 450;
+  letter-spacing: -0.01em;
+  margin: 0 0 36px;
+}
+
+.project-story__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 0 0 44px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-story__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.project-story__stat-value {
+  font-size: 2.1rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--case-accent, var(--ink));
+}
+
+.project-story__stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+}
+
+.project-story__section {
+  margin: 0 0 36px;
+}
+
+.project-story__section h2 {
+  font-size: 1.3rem;
+  font-weight: 550;
+  letter-spacing: -0.01em;
+  margin: 0 0 14px;
+}
+
+.project-story__section p {
+  margin: 0 0 14px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.project-story__section p:last-child {
+  margin-bottom: 0;
+}
+
+.project-story__palette {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 44px;
+}
+
+.project-story__swatch {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+}
+
+.project-story__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 80px;
+  padding: 22px 26px;
+  border-radius: 16px;
+  background: var(--bg-soft, rgba(0, 0, 0, 0.03));
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.project-story__cta:hover {
+  background: var(--case-accent, var(--accent-soft));
+}
+
+.project-story__cta-arrow {
+  transition: transform 0.2s ease;
+}
+
+.project-story__cta:hover .project-story__cta-arrow {
+  transform: translateX(4px);
 }
 
 .case-study__table-wrap {
