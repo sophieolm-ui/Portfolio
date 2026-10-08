@@ -990,16 +990,36 @@ h3 {
 
 .project-detail {
   padding-bottom: 100px;
-  max-width: 1400px;
+  max-width: none;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .project-detail__back-wrap {
-  max-width: 1400px;
+  max-width: none;
+  padding-left: 100px;
+  padding-right: 100px;
   padding-top: 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+}
+
+@media (max-width: 1100px) {
+  .project-detail,
+  .project-detail__back-wrap {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .project-detail,
+  .project-detail__back-wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .project-detail__back {
@@ -1064,14 +1084,12 @@ h3 {
   color: var(--ink-soft);
   font-size: 1.1rem;
   margin: 0 0 12px;
-  max-width: 90ch;
 }
 
 .case-study__intro {
   font-size: 1.15rem;
   line-height: 1.6;
   margin: 0 0 56px;
-  max-width: 90ch;
 }
 
 .case-study__section {
@@ -1102,7 +1120,6 @@ h3 {
   color: var(--ink-soft);
   line-height: 1.7;
   margin: 0 0 16px;
-  max-width: 90ch;
 }
 
 .case-study__section p:last-child {
@@ -1118,7 +1135,6 @@ h3 {
   border-radius: var(--radius-md);
   padding: 20px 24px;
   margin: 0 0 20px;
-  max-width: 1000px;
 }
 
 .case-study__fact {
@@ -1154,7 +1170,6 @@ h3 {
   border-left: 2px solid var(--line);
   padding-left: 20px;
   margin: 0 0 20px;
-  max-width: 90ch;
 }
 
 .case-study__stats {
@@ -1162,7 +1177,6 @@ h3 {
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 14px;
   margin: 4px 0 24px;
-  max-width: 1000px;
 }
 
 .case-study__stat {
