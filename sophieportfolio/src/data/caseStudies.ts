@@ -1033,9 +1033,19 @@ export const caseStudies: Record<string, CaseStudy> = {
         paragraphs: ['A few individual projects within Sensigo:'],
       },
       {
+        heading: 'Improving Flow',
+        paragraphs: [
+          'I designed the Sensigo mobile app’s workflow and UI — how technicians move through a repair plan from start to finish: vehicle history, customer complaint, confirmed repair plan, then repair steps with detailed component and installation info for each one.',
+        ],
+      },
+      {
+        image: '/images/projects/sensigo/project1-flow-1.png',
+        imageAlt: 'Sensigo app flow: login, vehicle log, repair plan, and repair step detail screens',
+      },
+      {
         heading: 'Voice Notes',
         paragraphs: [
-          'A hands-free way for technicians to document repairs — view the repair plan, record a voice note, and get an automatic, editable summary. Built for time-sensitive environments where typing isn’t practical, and also available on web for reviewing and editing notes at a desk.',
+          'Within that app, I created voice notes as a new feature — a hands-free way to document repairs by recording a voice note and getting an automatic, editable summary, instead of typing. Also available on web for reviewing and editing notes at a desk.',
         ],
       },
       {
@@ -1043,19 +1053,13 @@ export const caseStudies: Record<string, CaseStudy> = {
         imageAlt: 'The voice notes flow in four steps: repair plan, record, transcript, summary',
       },
       {
+        image: '/images/projects/sensigo/project1-flow-2.png',
+        imageAlt: 'Sensigo app flow: voice note recording, transcription, and note summary screens',
+      },
+      {
         image: '/images/projects/sensigo/voicenotes-web.png',
         imageAlt: 'Voice notes history and transcript view on the Sensigo web app',
         imageCaption: 'Notes history and transcript, on web',
-      },
-      {
-        heading: 'Improving Flow',
-        paragraphs: [
-          'Streamlined how technicians move through a repair plan from start to finish — vehicle history, customer complaint, confirmed repair plan, then repair steps with detailed component and installation info for each one.',
-        ],
-      },
-      {
-        image: '/images/projects/sensigo/project1-flow-1.png',
-        imageAlt: 'Sensigo app flow: login, vehicle log, repair plan, and repair step detail screens',
       },
       {
         heading: 'Auto LLM Assistant',
