@@ -1093,6 +1093,24 @@ export const caseStudies: Record<string, CaseStudy> = {
         },
         image: '/images/projects/sensigo-detail-photo.png',
       },
+      {
+        heading: 'Project 2: Auto LLM Assistant',
+        paragraphs: [
+          'I designed a conversational AI assistant built into the Sensigo web platform, giving technicians a chat-based way to search documentation and get diagnostic help without leaving their workflow. Users can switch between modes — like SensiDoc for searching manuals, TSBs, and technical instructions, and SensiFix for troubleshooting a specific problem — upload a file for the assistant to reference, and pick up previous conversations from a saved session history.',
+        ],
+      },
+      {
+        images: [
+          {
+            src: '/images/projects/sensigo/project2-chatbot-home.png',
+            alt: 'Sensigo Auto LLM start screen with chat input and previous conversations list',
+          },
+          {
+            src: '/images/projects/sensigo/project2-chatbot-conversation.png',
+            alt: 'Sensigo Auto LLM live conversation in SensiFix mode',
+          },
+        ],
+      },
     ],
   },
 
