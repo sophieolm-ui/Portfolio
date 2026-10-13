@@ -1159,6 +1159,10 @@ export const caseStudies: Record<string, CaseStudy> = {
         ],
       },
       {
+        image: '/images/projects/foreflight/poster.png',
+        imageAlt: 'ForeFlight Social project poster summarizing the background, problem, process, key insights, and features',
+      },
+      {
         heading: 'The Opportunity',
         paragraphs: [
           'Currently, general aviation pilots connect and share aviation knowledge outside ForeFlight, which makes the collaboration process feel separate from the flight-planning experience. Our project explored how ForeFlight can integrate the community into its design.',
