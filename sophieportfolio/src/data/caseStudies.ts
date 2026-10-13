@@ -1093,9 +1093,6 @@ export const caseStudies: Record<string, CaseStudy> = {
         },
         image: '/images/projects/sensigo-detail-photo.png',
       },
-      {
-        image: '/images/projects/sensigo-ia-diagram.webp',
-      },
     ],
   },
 
