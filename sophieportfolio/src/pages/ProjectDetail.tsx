@@ -246,6 +246,17 @@ export function ProjectDetail() {
                     ))}
                   </div>
                 )}
+
+                {section.video && (
+                  <div className="case-study__video-embed">
+                    <iframe
+                      src={section.video.src}
+                      title={section.video.title ?? 'Video'}
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
+                    />
+                  </div>
+                )}
               </div>
             ))}
           </div>

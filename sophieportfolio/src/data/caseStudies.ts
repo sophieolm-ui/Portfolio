@@ -46,6 +46,8 @@ export interface CaseStudySection {
   images?: { src: string; alt?: string; caption?: string }[]
   /** Lay `images` out side by side instead of stacked. */
   imagesLayout?: 'stack' | 'row'
+  /** An embedded, playable video (e.g. a Google Drive or YouTube embed URL) shown inline. */
+  video?: { src: string; title?: string }
 }
 
 export interface CaseStudy {
@@ -1020,7 +1022,7 @@ export const caseStudies: Record<string, CaseStudy> = {
   sensigo: {
     tagline: 'Voice-first repair documentation for automotive technicians',
     intro:
-      'A mobile app that helps automotive technicians view repair plans and efficiently document their work using voice notes — reducing manual data entry and improving the accuracy of service documentation for warranty and compliance.',
+      'I created Sensigo, a mobile app that helps automotive technicians view repair plans and efficiently document their work using voice notes — reducing manual data entry and improving the accuracy of service documentation for warranty and compliance.',
     sections: [
       {
         facts: [
@@ -1031,7 +1033,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       },
       {
         paragraphs: [
-          'I designed the entire Sensigo mobile app, end to end — including:',
+          'Within the app, here’s what I designed:',
         ],
       },
       {
@@ -1217,7 +1219,10 @@ export const caseStudies: Record<string, CaseStudy> = {
           'We had our final meeting with ForeFlight and handed off our research and prototype to them. They are looking into how they might incorporate it into their current design system.',
           'It was a rewarding experience getting to present our project at the University of Washington Human Centered Design & Engineering Capstone Showcase.',
         ],
-        links: [{ label: 'Project overview video', href: 'https://lnkd.in/gCG6-vdT' }],
+        video: {
+          src: 'https://drive.google.com/file/d/1ovH70c9AqhdNGvvNBm7X9FY5si_KVIxt/preview',
+          title: 'Project overview video',
+        },
       },
       {
         heading: 'Acknowledgments',
