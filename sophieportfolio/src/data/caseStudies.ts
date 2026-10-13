@@ -842,6 +842,10 @@ export const caseStudies: Record<string, CaseStudy> = {
         imageAlt: 'Sensigo app flow: login, vehicle log, repair plan, and repair step detail screens',
       },
       {
+        image: '/images/projects/sensigo/project1-flow-2.png',
+        imageAlt: 'Sensigo app flow: voice note recording, transcription, and note summary screens',
+      },
+      {
         heading: 'Voice Notes',
         paragraphs: [
           'Within that app, I created voice notes as a new feature — a hands-free way to document repairs by recording a voice note and getting an automatic, editable summary, instead of typing. Also available on web for reviewing and editing notes at a desk.',
@@ -850,10 +854,6 @@ export const caseStudies: Record<string, CaseStudy> = {
       {
         image: '/images/projects/sensigo/voicenotes-steps.png',
         imageAlt: 'The voice notes flow in four steps: repair plan, record, transcript, summary',
-      },
-      {
-        image: '/images/projects/sensigo/project1-flow-2.png',
-        imageAlt: 'Sensigo app flow: voice note recording, transcription, and note summary screens',
       },
       {
         image: '/images/projects/sensigo/voicenotes-web.png',
