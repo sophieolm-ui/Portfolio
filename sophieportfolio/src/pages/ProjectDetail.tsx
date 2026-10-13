@@ -233,7 +233,11 @@ export function ProjectDetail() {
                 )}
 
                 {section.images && (
-                  <div className="case-study__figure-stack">
+                  <div
+                    className={`case-study__figure-stack${
+                      section.imagesLayout === 'row' ? ' case-study__figure-stack--row' : ''
+                    }`}
+                  >
                     {section.images.map((img, k) => (
                       <figure className="case-study__figure" key={k}>
                         <img src={img.src} alt={img.alt ?? ''} />

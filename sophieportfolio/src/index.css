@@ -1363,7 +1363,7 @@ h3 {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: var(--radius-md);
+  border-radius: 14px;
   border: 1px solid var(--line);
 }
 
@@ -1376,6 +1376,18 @@ h3 {
 
 .case-study__figure-stack .case-study__figure {
   margin: 0;
+}
+
+.case-study__figure-stack--row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: none;
+}
+
+.case-study__figure-stack--row .case-study__figure {
+  flex: 1 1 300px;
+  max-width: 400px;
 }
 
 .case-study__figure figcaption {

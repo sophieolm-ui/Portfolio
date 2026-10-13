@@ -44,6 +44,8 @@ export interface CaseStudySection {
   imageCaption?: string
   /** Multiple images stacked tightly, one right under the next. */
   images?: { src: string; alt?: string; caption?: string }[]
+  /** Lay `images` out side by side instead of stacked. */
+  imagesLayout?: 'stack' | 'row'
 }
 
 export interface CaseStudy {
@@ -1057,6 +1059,7 @@ export const caseStudies: Record<string, CaseStudy> = {
         ],
       },
       {
+        imagesLayout: 'row',
         images: [
           {
             src: '/images/projects/sensigo/project2-chatbot-home.png',
