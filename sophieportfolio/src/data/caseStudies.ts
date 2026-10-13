@@ -1030,12 +1030,14 @@ export const caseStudies: Record<string, CaseStudy> = {
         ],
       },
       {
-        paragraphs: ['A few individual projects within Sensigo:'],
+        paragraphs: [
+          'I designed the entire Sensigo mobile app, end to end — including:',
+        ],
       },
       {
         heading: 'Improving Flow',
         paragraphs: [
-          'I designed the Sensigo mobile app’s workflow and UI — how technicians move through a repair plan from start to finish: vehicle history, customer complaint, confirmed repair plan, then repair steps with detailed component and installation info for each one.',
+          'How technicians move through a repair plan from start to finish: vehicle history, customer complaint, confirmed repair plan, then repair steps with detailed component and installation info for each one.',
         ],
       },
       {
@@ -1060,6 +1062,11 @@ export const caseStudies: Record<string, CaseStudy> = {
         image: '/images/projects/sensigo/voicenotes-web.png',
         imageAlt: 'Voice notes history and transcript view on the Sensigo web app',
         imageCaption: 'Notes history and transcript, on web',
+      },
+      {
+        paragraphs: [
+          'I also ran usability tests on the app to tweak other existing features based on real technician feedback.',
+        ],
       },
       {
         heading: 'Auto LLM Assistant',
