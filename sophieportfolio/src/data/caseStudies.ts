@@ -42,6 +42,8 @@ export interface CaseStudySection {
   image?: string
   imageAlt?: string
   imageCaption?: string
+  /** Multiple images stacked tightly, one right under the next. */
+  images?: { src: string; alt?: string; caption?: string }[]
 }
 
 export interface CaseStudy {
@@ -1023,6 +1025,24 @@ export const caseStudies: Record<string, CaseStudy> = {
           { label: 'Role', text: 'UX Designer' },
           { label: 'Platform', text: 'Mobile (iOS)' },
           { label: 'Focus', text: 'Workflow optimization, voice interaction, field usability' },
+        ],
+      },
+      {
+        heading: 'Project 1: Workflow optimization, voice interaction, field usability',
+        paragraphs: [
+          'I designed a mobile application that helps automotive technicians view repair plans and efficiently document their work using voice notes. The goal was to reduce manual data entry, minimize cognitive load during repairs, and improve the accuracy and completeness of service documentation submitted for warranty and compliance purposes.',
+        ],
+      },
+      {
+        images: [
+          {
+            src: '/images/projects/sensigo/project1-flow-1.png',
+            alt: 'Sensigo app flow: login, vehicle log, repair plan, and repair step detail screens',
+          },
+          {
+            src: '/images/projects/sensigo/project1-flow-2.png',
+            alt: 'Sensigo app flow: voice note recording, transcription, and note summary screens',
+          },
         ],
       },
       {

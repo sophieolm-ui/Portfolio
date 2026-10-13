@@ -1366,6 +1366,17 @@ h3 {
   border: 1px solid var(--line);
 }
 
+.case-study__figure-stack {
+  margin: 24px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.case-study__figure-stack .case-study__figure {
+  margin: 0;
+}
+
 .case-study__figure figcaption {
   margin-top: 10px;
   font-size: 0.85rem;

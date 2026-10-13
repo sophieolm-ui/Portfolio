@@ -231,6 +231,17 @@ export function ProjectDetail() {
                     {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
                   </figure>
                 )}
+
+                {section.images && (
+                  <div className="case-study__figure-stack">
+                    {section.images.map((img, k) => (
+                      <figure className="case-study__figure" key={k}>
+                        <img src={img.src} alt={img.alt ?? ''} />
+                        {img.caption && <figcaption>{img.caption}</figcaption>}
+                      </figure>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
