@@ -1035,12 +1035,17 @@ export const caseStudies: Record<string, CaseStudy> = {
       {
         heading: 'Voice Notes',
         paragraphs: [
-          'A hands-free way for technicians to document repairs — view the repair plan, record a voice note, and get an automatic, editable summary. Built for time-sensitive environments where typing isn’t practical.',
+          'A hands-free way for technicians to document repairs — view the repair plan, record a voice note, and get an automatic, editable summary. Built for time-sensitive environments where typing isn’t practical, and also available on web for reviewing and editing notes at a desk.',
         ],
       },
       {
         image: '/images/projects/sensigo/voicenotes-steps.png',
         imageAlt: 'The voice notes flow in four steps: repair plan, record, transcript, summary',
+      },
+      {
+        image: '/images/projects/sensigo/voicenotes-web.png',
+        imageAlt: 'Voice notes history and transcript view on the Sensigo web app',
+        imageCaption: 'Notes history and transcript, on web',
       },
       {
         heading: 'Improving Flow',
