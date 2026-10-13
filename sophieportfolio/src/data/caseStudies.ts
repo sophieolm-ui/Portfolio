@@ -869,7 +869,7 @@ export const caseStudies: Record<string, CaseStudy> = {
       {
         heading: 'Auto LLM Assistant',
         paragraphs: [
-          'A chat assistant built into the Sensigo web platform for searching documentation and getting diagnostic help without leaving the workflow — switch between SensiDoc for manuals and TSBs or SensiFix for troubleshooting, upload a file for it to reference, and pick up past conversations.',
+          'Designed a chat assistant built into the Sensigo web platform for searching documentation and getting diagnostic help without leaving the workflow. Users can switch between SensiDoc for manuals and TSBs or SensiFix for troubleshooting, upload a file for it to reference, and pick up past conversations.',
         ],
       },
       {
