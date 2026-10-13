@@ -1037,9 +1037,9 @@ export const caseStudies: Record<string, CaseStudy> = {
         ],
       },
       {
-        heading: 'Improving Flow',
+        heading: 'Creating the App',
         paragraphs: [
-          'How technicians move through a repair plan from start to finish: vehicle history, customer complaint, confirmed repair plan, then repair steps with detailed component and installation info for each one.',
+          'Designed the flow technicians move through a repair plan from start to finish: vehicle history, customer complaint, confirmed repair plan, then repair steps with detailed component and installation info for each one.',
         ],
       },
       {
