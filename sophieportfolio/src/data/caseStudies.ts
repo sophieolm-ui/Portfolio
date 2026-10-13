@@ -784,6 +784,7 @@ export const caseStudies: Record<string, CaseStudy> = {
           { label: 'Duration', text: '10 weeks' },
           { label: 'Tools', text: 'The Mill' },
         ],
+        links: [{ label: 'Full case study', href: 'https://trailflow.framer.website/' }],
       },
       {
         heading: 'The Problem',
