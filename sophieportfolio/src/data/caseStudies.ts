@@ -1028,9 +1028,12 @@ export const caseStudies: Record<string, CaseStudy> = {
         ],
       },
       {
-        heading: 'Project 1: Voice Notes',
+        paragraphs: ['A few individual projects within Sensigo:'],
+      },
+      {
+        heading: 'Voice Notes',
         paragraphs: [
-          'I designed a mobile application that helps automotive technicians view repair plans and efficiently document their work using voice notes. The goal was to reduce manual data entry, minimize cognitive load during repairs, and improve the accuracy and completeness of service documentation submitted for warranty and compliance purposes.',
+          'A hands-free way for technicians to document repairs — view the repair plan, record a voice note, and get an automatic, editable summary. Built for time-sensitive environments where typing isn’t practical.',
         ],
       },
       {
@@ -1038,61 +1041,9 @@ export const caseStudies: Record<string, CaseStudy> = {
         imageAlt: 'The voice notes flow in four steps: repair plan, record, transcript, summary',
       },
       {
-        image: '/images/projects/sensigo/project1-flow-2.png',
-        imageAlt: 'Sensigo app flow: voice note recording, transcription, and note summary screens',
-      },
-      {
-        heading: 'Problem',
+        heading: 'Improving Flow',
         paragraphs: [
-          'Technicians often work in physically demanding, time-sensitive environments where typing detailed repair notes is impractical. Existing systems required excessive manual input, leading to incomplete documentation, errors, and frustration — especially when notes were needed for warranty submissions or follow-up diagnostics.',
-        ],
-      },
-      {
-        heading: 'Solution',
-        paragraphs: ['The app enables technicians to:'],
-        insights: {
-          items: [
-            'View structured repair plans and customer complaints in one place.',
-            'Record voice notes during or after repairs.',
-            'Automatically convert voice recordings into organized, editable text summaries.',
-            'Review, refine, and submit notes with confidence.',
-          ],
-        },
-      },
-      {
-        insights: {
-          title: 'Key design decisions',
-          items: [
-            'Voice-first interaction to support hands-free use in the workshop.',
-            'Clear information hierarchy for repair steps, actions performed, and parts used.',
-            'Progressive disclosure to keep screens readable while allowing detailed review.',
-            'Confirmation and completion states to prevent accidental submissions.',
-          ],
-        },
-      },
-      {
-        heading: 'Outcome & Impact',
-        paragraphs: [
-          'The final design streamlines the documentation workflow, helping technicians complete notes faster while maintaining high-quality records. By integrating voice input with structured summaries, the app bridges the gap between real-world repair work and accurate digital reporting — improving efficiency, reducing errors, and supporting smoother warranty submissions.',
-        ],
-      },
-      {
-        heading: 'Key Skills Demonstrated',
-        insights: {
-          items: [
-            'Mobile UX & interaction design',
-            'Voice UX and multimodal input',
-            'Workflow analysis for field workers',
-            'Information architecture & content hierarchy',
-            'Designing for constrained, real-world environments',
-          ],
-        },
-        image: '/images/projects/sensigo-detail-photo.png',
-      },
-      {
-        heading: 'Project 2: Improving Flow',
-        paragraphs: [
-          'I streamlined how technicians move through a repair plan from start to finish — logging in and pulling up a vehicle’s recent history, reviewing the customer’s reported problem and confirming the repair plan, then working through repair steps one at a time with the ability to drill into detailed component information and installation guidance for any step along the way.',
+          'Streamlined how technicians move through a repair plan from start to finish — vehicle history, customer complaint, confirmed repair plan, then repair steps with detailed component and installation info for each one.',
         ],
       },
       {
@@ -1100,9 +1051,9 @@ export const caseStudies: Record<string, CaseStudy> = {
         imageAlt: 'Sensigo app flow: login, vehicle log, repair plan, and repair step detail screens',
       },
       {
-        heading: 'Project 3: Auto LLM Assistant',
+        heading: 'Auto LLM Assistant',
         paragraphs: [
-          'I designed a conversational AI assistant built into the Sensigo web platform, giving technicians a chat-based way to search documentation and get diagnostic help without leaving their workflow. Users can switch between modes — like SensiDoc for searching manuals, TSBs, and technical instructions, and SensiFix for troubleshooting a specific problem — upload a file for the assistant to reference, and pick up previous conversations from a saved session history.',
+          'A chat assistant built into the Sensigo web platform for searching documentation and getting diagnostic help without leaving the workflow — switch between SensiDoc for manuals and TSBs or SensiFix for troubleshooting, upload a file for it to reference, and pick up past conversations.',
         ],
       },
       {

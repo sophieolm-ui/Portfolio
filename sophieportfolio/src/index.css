@@ -1356,6 +1356,7 @@ h3 {
 
 .case-study__figure {
   margin: 24px 0 0;
+  max-width: 640px;
 }
 
 .case-study__figure img {
