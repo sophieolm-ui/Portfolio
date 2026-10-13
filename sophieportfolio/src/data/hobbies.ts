@@ -18,8 +18,6 @@ export const hobbies: Hobby[] = [
   { name: 'New York', category: 'Photography', color: '#2f3b4a', image: '/images/hobbies/photo-nyc.jpg' },
   { name: 'Autumn', category: 'Photography', color: '#8a5a2f', image: '/images/hobbies/photo-autumn.jpg' },
   { name: 'Yellowstone', category: 'Photography', color: '#c9752f', image: '/images/hobbies/photo-yellowstone.jpg' },
-  { name: 'Adriatic Coast', category: 'Photography', color: '#2f6f8f', image: '/images/hobbies/photo-adriatic.jpg' },
-  { name: 'Natural History Museum', category: 'Photography', color: '#4a5c3e', image: '/images/hobbies/photo-nhm.jpg' },
   { name: 'Split', category: 'Photography', color: '#3e6b8f', image: '/images/hobbies/photo-split.jpg' },
   { name: 'Amphitheater', category: 'Photography', color: '#8a7355', image: '/images/hobbies/photo-amphitheater.jpg' },
   { name: 'Tulips', category: 'Photography', color: '#d9a62f', image: '/images/hobbies/photo-tulips.jpg' },
