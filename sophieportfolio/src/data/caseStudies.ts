@@ -863,8 +863,9 @@ export const caseStudies: Record<string, CaseStudy> = {
       {
         heading: 'Usability Testing',
         paragraphs: [
-          'Conducted 5 usability tests with existing customers and users to tweak other existing features based on real technician feedback.',
+          'After the app shipped, I went back and sat down with existing customers and users already using Sensigo day to day — watching how they actually worked through the app, where they hesitated, and where existing features fell short. That feedback was used to tweak and refine those features.',
         ],
+        stats: [{ value: '5', label: 'Usability tests' }],
       },
       {
         heading: 'Auto LLM Assistant',
