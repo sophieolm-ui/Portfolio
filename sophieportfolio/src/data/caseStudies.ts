@@ -861,8 +861,9 @@ export const caseStudies: Record<string, CaseStudy> = {
         imageCaption: 'Notes history and transcript, on web',
       },
       {
+        heading: 'Usability Testing',
         paragraphs: [
-          'I also ran usability tests on the app to tweak other existing features based on real technician feedback.',
+          'Conducted 5 usability tests with existing customers and users to tweak other existing features based on real technician feedback.',
         ],
       },
       {
