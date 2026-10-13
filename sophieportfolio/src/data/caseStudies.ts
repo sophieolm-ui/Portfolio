@@ -1028,22 +1028,18 @@ export const caseStudies: Record<string, CaseStudy> = {
         ],
       },
       {
-        heading: 'Project 1: Workflow optimization, voice interaction, field usability',
+        heading: 'Project 1: Voice Notes',
         paragraphs: [
           'I designed a mobile application that helps automotive technicians view repair plans and efficiently document their work using voice notes. The goal was to reduce manual data entry, minimize cognitive load during repairs, and improve the accuracy and completeness of service documentation submitted for warranty and compliance purposes.',
         ],
       },
       {
-        images: [
-          {
-            src: '/images/projects/sensigo/project1-flow-1.png',
-            alt: 'Sensigo app flow: login, vehicle log, repair plan, and repair step detail screens',
-          },
-          {
-            src: '/images/projects/sensigo/project1-flow-2.png',
-            alt: 'Sensigo app flow: voice note recording, transcription, and note summary screens',
-          },
-        ],
+        image: '/images/projects/sensigo/voicenotes-steps.png',
+        imageAlt: 'The voice notes flow in four steps: repair plan, record, transcript, summary',
+      },
+      {
+        image: '/images/projects/sensigo/project1-flow-2.png',
+        imageAlt: 'Sensigo app flow: voice note recording, transcription, and note summary screens',
       },
       {
         heading: 'Problem',
@@ -1094,7 +1090,17 @@ export const caseStudies: Record<string, CaseStudy> = {
         image: '/images/projects/sensigo-detail-photo.png',
       },
       {
-        heading: 'Project 2: Auto LLM Assistant',
+        heading: 'Project 2: Improving Flow',
+        paragraphs: [
+          'I streamlined how technicians move through a repair plan from start to finish — logging in and pulling up a vehicle’s recent history, reviewing the customer’s reported problem and confirming the repair plan, then working through repair steps one at a time with the ability to drill into detailed component information and installation guidance for any step along the way.',
+        ],
+      },
+      {
+        image: '/images/projects/sensigo/project1-flow-1.png',
+        imageAlt: 'Sensigo app flow: login, vehicle log, repair plan, and repair step detail screens',
+      },
+      {
+        heading: 'Project 3: Auto LLM Assistant',
         paragraphs: [
           'I designed a conversational AI assistant built into the Sensigo web platform, giving technicians a chat-based way to search documentation and get diagnostic help without leaving their workflow. Users can switch between modes — like SensiDoc for searching manuals, TSBs, and technical instructions, and SensiFix for troubleshooting a specific problem — upload a file for the assistant to reference, and pick up previous conversations from a saved session history.',
         ],
