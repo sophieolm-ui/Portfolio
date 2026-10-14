@@ -1284,6 +1284,19 @@ h3 {
   border-color: var(--ink);
 }
 
+.case-study__links a.case-study__links-primary {
+  color: #fff;
+  background: var(--case-accent, var(--ink));
+  border-color: var(--case-accent, var(--ink));
+  font-size: 0.78rem;
+  padding: 10px 18px;
+}
+
+.case-study__links a.case-study__links-primary:hover {
+  color: #fff;
+  opacity: 0.88;
+}
+
 .case-study__videos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -1388,6 +1401,34 @@ h3 {
 .case-study__figure-stack--row .case-study__figure {
   flex: 1 1 300px;
   max-width: 400px;
+}
+
+.case-study__section--with-image {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.case-study__section--with-image .case-study__section-text {
+  flex: 1 1 380px;
+  min-width: 0;
+}
+
+.case-study__figure--side {
+  margin: 0;
+  flex: 0 1 240px;
+  max-width: 240px;
+}
+
+@media (max-width: 760px) {
+  .case-study__section--with-image {
+    flex-direction: column;
+  }
+
+  .case-study__figure--side {
+    margin-top: 20px;
+    max-width: 260px;
+  }
 }
 
 .case-study__figure figcaption {

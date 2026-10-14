@@ -34,7 +34,7 @@ export interface CaseStudySection {
     title?: string
     items: string[]
   }
-  links?: { label: string; href: string }[]
+  links?: { label: string; href: string; primary?: boolean }[]
   table?: CaseStudyTable
   cards?: CaseStudyCard[]
   palette?: CaseStudyPaletteGroup[]
@@ -42,6 +42,8 @@ export interface CaseStudySection {
   image?: string
   imageAlt?: string
   imageCaption?: string
+  /** 'side' pairs a smaller image beside this section's text instead of a full-width block below it. */
+  imageLayout?: 'block' | 'side'
   /** Multiple images stacked tightly, one right under the next. */
   images?: { src: string; alt?: string; caption?: string }[]
   /** Lay `images` out side by side instead of stacked. */
@@ -784,17 +786,16 @@ export const caseStudies: Record<string, CaseStudy> = {
           { label: 'Duration', text: '10 weeks' },
           { label: 'Tools', text: 'The Mill' },
         ],
-        links: [{ label: 'Full case study', href: 'https://trailflow.framer.website/' }],
-      },
-      {
-        image: '/images/projects/trailflow/app-map.png',
-        imageAlt: 'TrailFlow app showing a planned route and water fountain locations on a map of north Seattle',
+        links: [{ label: 'Full case study', href: 'https://trailflow.framer.website/', primary: true }],
       },
       {
         heading: 'The Problem',
         paragraphs: [
           'Runners on the Burke-Gilman Trail struggle to find working water fountains and plan routes around them. Interviews with trail runners and a competitive analysis of existing hydration solutions surfaced three recurring themes that shaped the design.',
         ],
+        image: '/images/projects/trailflow/app-map.png',
+        imageAlt: 'TrailFlow app showing a planned route and water fountain locations on a map of north Seattle',
+        imageLayout: 'side',
         insights: {
           title: 'Findings',
           items: [
@@ -963,7 +964,7 @@ export const caseStudies: Record<string, CaseStudy> = {
           { label: 'Program', text: 'University of Washington HCDE Capstone' },
         ],
         links: [
-          { label: 'Full case study & research deck', href: 'https://foreflightsocial.framer.website/' },
+          { label: 'Full case study & research deck', href: 'https://foreflightsocial.framer.website/', primary: true },
         ],
       },
       {

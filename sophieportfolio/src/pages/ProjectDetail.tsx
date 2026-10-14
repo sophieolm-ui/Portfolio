@@ -74,8 +74,10 @@ export function ProjectDetail() {
             <p className="case-study__tagline">{caseStudy.tagline}</p>
             <p className="case-study__intro">{caseStudy.intro}</p>
 
-            {caseStudy.sections.map((section, i) => (
-              <div className="case-study__section" key={i}>
+            {caseStudy.sections.map((section, i) => {
+              const sideImage = Boolean(section.image) && section.imageLayout === 'side'
+              const body = (
+                <>
                 {section.heading && <h2>{section.heading}</h2>}
 
                 {section.facts && (
@@ -215,7 +217,12 @@ export function ProjectDetail() {
                           .filter((link) => !getVideoThumbnail(link.href))
                           .map((link) => (
                             <li key={link.href}>
-                              <a href={link.href} target="_blank" rel="noreferrer">
+                              <a
+                                href={link.href}
+                                target="_blank"
+                                rel="noreferrer"
+                                className={link.primary ? 'case-study__links-primary' : undefined}
+                              >
                                 {link.label} ↗
                               </a>
                             </li>
@@ -224,41 +231,51 @@ export function ProjectDetail() {
                     )}
                   </>
                 )}
+                </>
+              )
 
-                {section.image && (
-                  <figure className="case-study__figure">
-                    <img src={section.image} alt={section.imageAlt ?? ''} />
-                    {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
-                  </figure>
-                )}
+              return (
+                <div
+                  className={`case-study__section${sideImage ? ' case-study__section--with-image' : ''}`}
+                  key={i}
+                >
+                  {sideImage ? <div className="case-study__section-text">{body}</div> : body}
 
-                {section.images && (
-                  <div
-                    className={`case-study__figure-stack${
-                      section.imagesLayout === 'row' ? ' case-study__figure-stack--row' : ''
-                    }`}
-                  >
-                    {section.images.map((img, k) => (
-                      <figure className="case-study__figure" key={k}>
-                        <img src={img.src} alt={img.alt ?? ''} />
-                        {img.caption && <figcaption>{img.caption}</figcaption>}
-                      </figure>
-                    ))}
-                  </div>
-                )}
+                  {section.image && (
+                    <figure className={`case-study__figure${sideImage ? ' case-study__figure--side' : ''}`}>
+                      <img src={section.image} alt={section.imageAlt ?? ''} />
+                      {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
+                    </figure>
+                  )}
 
-                {section.video && (
-                  <div className="case-study__video-embed">
-                    <iframe
-                      src={section.video.src}
-                      title={section.video.title ?? 'Video'}
-                      allow="autoplay; encrypted-media"
-                      allowFullScreen
-                    />
-                  </div>
-                )}
-              </div>
-            ))}
+                  {section.images && (
+                    <div
+                      className={`case-study__figure-stack${
+                        section.imagesLayout === 'row' ? ' case-study__figure-stack--row' : ''
+                      }`}
+                    >
+                      {section.images.map((img, k) => (
+                        <figure className="case-study__figure" key={k}>
+                          <img src={img.src} alt={img.alt ?? ''} />
+                          {img.caption && <figcaption>{img.caption}</figcaption>}
+                        </figure>
+                      ))}
+                    </div>
+                  )}
+
+                  {section.video && (
+                    <div className="case-study__video-embed">
+                      <iframe
+                        src={section.video.src}
+                        title={section.video.title ?? 'Video'}
+                        allow="autoplay; encrypted-media"
+                        allowFullScreen
+                      />
+                    </div>
+                  )}
+                </div>
+              )
+            })}
           </div>
         ) : (
           <div className="project-detail__placeholder">{project.summary}</div>
