@@ -1056,6 +1056,8 @@ export const caseStudies: Record<string, CaseStudy> = {
         paragraphs: [
           'This program challenged me to design user experiences in ways I hadn’t before. We focused on embodied, experiential, and conceptual design rather than digital products. A key skill I built was abductive reasoning: learning to move forward with design ideas even when the path isn’t clear, and using iteration and experimentation to discover possibilities. It was both challenging and exciting to “design through trial and error.”',
         ],
+        image: '/images/projects/london/kew-gardens-group.jpg',
+        imageAlt: 'The study abroad group in front of the Palm House at Kew Gardens',
       },
       {
         heading: 'Project 1 — A cultural bridge between the DLR and the Prime Meridian',
