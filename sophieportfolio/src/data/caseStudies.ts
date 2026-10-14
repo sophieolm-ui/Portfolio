@@ -787,6 +787,10 @@ export const caseStudies: Record<string, CaseStudy> = {
         links: [{ label: 'Full case study', href: 'https://trailflow.framer.website/' }],
       },
       {
+        image: '/images/projects/trailflow/app-map.png',
+        imageAlt: 'TrailFlow app showing a planned route and water fountain locations on a map of north Seattle',
+      },
+      {
         heading: 'The Problem',
         paragraphs: [
           'Runners on the Burke-Gilman Trail struggle to find working water fountains and plan routes around them. Interviews with trail runners and a competitive analysis of existing hydration solutions surfaced three recurring themes that shaped the design.',
