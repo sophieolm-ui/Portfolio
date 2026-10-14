@@ -30,11 +30,13 @@ export function AboutSection() {
             different things.
           </p>
           <p>
-            I've also always wanted to help others — through the years I've
-            made myself more familiar with technology while discovering my
-            passion for psychology. There are many ways technology can be
-            improved to maximize the number of people who can access it,
-            both through engineering and psychology.
+            I've also always wanted to understand why people behave the way
+            they do. After finishing my Bachelor's at the University of
+            Washington in Human Centered Design Engineering, I am now doing my
+            Masters in Design with Behaviour Science at Imperial! I am keen to
+            understand how technology can be improved to maximize the number
+            of people who can engage with it, both through design and
+            behaviour science.
           </p>
           <dl className="about-stats">
             <StatCounter target={3} suffix="+" label="Applications" />
