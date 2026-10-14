@@ -32,7 +32,7 @@ export const projects: Project[] = [
   {
     slug: 'sensigo',
     name: 'Sensigo',
-    year: '2025',
+    year: '2026',
     tag: 'Mobile · Product design',
     summary: 'Case study coming soon.',
     cardBg: '#2b2138',
