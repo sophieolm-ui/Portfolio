@@ -1,13 +1,30 @@
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Nav } from '../components/Nav'
 import { ProjectArt } from '../components/ProjectArt'
 import { projects } from '../data/projects'
 import { projectStories } from '../data/projectStories'
 
+interface ActiveImage {
+  src: string
+  alt: string
+  caption?: string
+}
+
 export function ProjectStory() {
   const { slug } = useParams<{ slug: string }>()
   const project = projects.find((p) => p.slug === slug)
   const story = slug ? projectStories[slug] : undefined
+  const [activeImage, setActiveImage] = useState<ActiveImage | null>(null)
+
+  useEffect(() => {
+    if (!activeImage) return
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setActiveImage(null)
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [activeImage])
 
   if (!project || !story) {
     return (
@@ -75,7 +92,19 @@ export function ProjectStory() {
               </div>
               {section.image && (
                 <figure className="project-story__figure">
-                  <img src={section.image} alt={section.imageAlt ?? ''} />
+                  <button
+                    type="button"
+                    className="case-study__figure-btn"
+                    onClick={() =>
+                      setActiveImage({
+                        src: section.image!,
+                        alt: section.imageAlt ?? '',
+                        caption: section.imageCaption,
+                      })
+                    }
+                  >
+                    <img src={section.image} alt={section.imageAlt ?? ''} />
+                  </button>
                   {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
                 </figure>
               )}
@@ -96,6 +125,25 @@ export function ProjectStory() {
           </Link>
         </div>
       </div>
+
+      {activeImage && (
+        <div className="case-study-lightbox" onClick={() => setActiveImage(null)}>
+          <button
+            type="button"
+            className="case-study-lightbox__close"
+            aria-label="Close"
+            onClick={() => setActiveImage(null)}
+          >
+            ✕
+          </button>
+          <figure className="case-study-lightbox__frame" onClick={(e) => e.stopPropagation()}>
+            <img src={activeImage.src} alt={activeImage.alt} />
+            {(activeImage.caption || activeImage.alt) && (
+              <figcaption>{activeImage.caption ?? activeImage.alt}</figcaption>
+            )}
+          </figure>
+        </div>
+      )}
     </>
   )
 }
