@@ -860,18 +860,15 @@ export const caseStudies: Record<string, CaseStudy> = {
         ],
       },
       {
-        imagesLayout: 'row',
-        images: [
-          {
-            src: '/images/projects/sensigo/voicenotes-steps.png',
-            alt: 'The voice notes flow in four steps: repair plan, record, transcript, summary',
-          },
-          {
-            src: '/images/projects/sensigo/voicenotes-web.png',
-            alt: 'Voice notes history and transcript view on the Sensigo web app',
-            caption: 'Notes history and transcript, on web',
-          },
-        ],
+        image: '/images/projects/sensigo/voicenotes-steps.png',
+        imageAlt: 'The voice notes flow in four steps: repair plan, record, transcript, summary',
+        imageMaxWidth: 900,
+      },
+      {
+        image: '/images/projects/sensigo/voicenotes-web.png',
+        imageAlt: 'Voice notes history and transcript view on the Sensigo web app',
+        imageCaption: 'Notes history and transcript, on web',
+        imageMaxWidth: 460,
       },
       {
         heading: 'Usability Testing',
