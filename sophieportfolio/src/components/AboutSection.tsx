@@ -40,7 +40,7 @@ export function AboutSection() {
           </p>
           <dl className="about-stats">
             <StatCounter target={3} suffix="+" label="Applications" />
-            <StatCounter target={3} suffix="+" label="Years in product design" />
+            <StatCounter target={3} suffix="+" label="Years in experience design" />
           </dl>
         </div>
       </div>

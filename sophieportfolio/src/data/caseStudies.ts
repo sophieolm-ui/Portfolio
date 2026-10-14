@@ -44,6 +44,8 @@ export interface CaseStudySection {
   imageCaption?: string
   /** 'side' pairs a smaller image beside this section's text instead of a full-width block below it. */
   imageLayout?: 'block' | 'side'
+  /** Caps the figure's width in px. Defaults to 640. */
+  imageMaxWidth?: number
   /** Multiple images stacked tightly, one right under the next. */
   images?: { src: string; alt?: string; caption?: string }[]
   /** Lay `images` out side by side instead of stacked. */
@@ -865,6 +867,7 @@ export const caseStudies: Record<string, CaseStudy> = {
         image: '/images/projects/sensigo/voicenotes-web.png',
         imageAlt: 'Voice notes history and transcript view on the Sensigo web app',
         imageCaption: 'Notes history and transcript, on web',
+        imageMaxWidth: 460,
       },
       {
         heading: 'Usability Testing',

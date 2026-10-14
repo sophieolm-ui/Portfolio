@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Nav } from '../components/Nav'
 import { ProjectArt } from '../components/ProjectArt'
@@ -6,11 +7,27 @@ import { caseStudies } from '../data/caseStudies'
 import { projectStories } from '../data/projectStories'
 import { getVideoThumbnail } from '../utils/video'
 
+interface ActiveImage {
+  src: string
+  alt: string
+  caption?: string
+}
+
 export function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>()
   const project = projects.find((p) => p.slug === slug)
   const caseStudy = slug ? caseStudies[slug] : undefined
   const hasStory = Boolean(slug && projectStories[slug])
+  const [activeImage, setActiveImage] = useState<ActiveImage | null>(null)
+
+  useEffect(() => {
+    if (!activeImage) return
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setActiveImage(null)
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [activeImage])
 
   if (!project) {
     return (
@@ -242,8 +259,25 @@ export function ProjectDetail() {
                   {sideImage ? <div className="case-study__section-text">{body}</div> : body}
 
                   {section.image && (
-                    <figure className={`case-study__figure${sideImage ? ' case-study__figure--side' : ''}`}>
-                      <img src={section.image} alt={section.imageAlt ?? ''} />
+                    <figure
+                      className={`case-study__figure${sideImage ? ' case-study__figure--side' : ''}`}
+                      style={
+                        !sideImage && section.imageMaxWidth ? { maxWidth: section.imageMaxWidth } : undefined
+                      }
+                    >
+                      <button
+                        type="button"
+                        className="case-study__figure-btn"
+                        onClick={() =>
+                          setActiveImage({
+                            src: section.image!,
+                            alt: section.imageAlt ?? '',
+                            caption: section.imageCaption,
+                          })
+                        }
+                      >
+                        <img src={section.image} alt={section.imageAlt ?? ''} />
+                      </button>
                       {section.imageCaption && <figcaption>{section.imageCaption}</figcaption>}
                     </figure>
                   )}
@@ -256,7 +290,13 @@ export function ProjectDetail() {
                     >
                       {section.images.map((img, k) => (
                         <figure className="case-study__figure" key={k}>
-                          <img src={img.src} alt={img.alt ?? ''} />
+                          <button
+                            type="button"
+                            className="case-study__figure-btn"
+                            onClick={() => setActiveImage({ src: img.src, alt: img.alt ?? '', caption: img.caption })}
+                          >
+                            <img src={img.src} alt={img.alt ?? ''} />
+                          </button>
                           {img.caption && <figcaption>{img.caption}</figcaption>}
                         </figure>
                       ))}
@@ -281,6 +321,25 @@ export function ProjectDetail() {
           <div className="project-detail__placeholder">{project.summary}</div>
         )}
       </div>
+
+      {activeImage && (
+        <div className="case-study-lightbox" onClick={() => setActiveImage(null)}>
+          <button
+            type="button"
+            className="case-study-lightbox__close"
+            aria-label="Close"
+            onClick={() => setActiveImage(null)}
+          >
+            ✕
+          </button>
+          <figure className="case-study-lightbox__frame" onClick={(e) => e.stopPropagation()}>
+            <img src={activeImage.src} alt={activeImage.alt} />
+            {(activeImage.caption || activeImage.alt) && (
+              <figcaption>{activeImage.caption ?? activeImage.alt}</figcaption>
+            )}
+          </figure>
+        </div>
+      )}
     </>
   )
 }
